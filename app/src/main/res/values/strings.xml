@@ -12,4 +12,71 @@
     <string name="to">To</string>
     <string name="hint">hint</string>
     <string name="team_06">Team 06</string>
+
+
+
+
+
+    <string name="MsgCountry">Country</string>
+    <string name="MsgSL">Sri Lanka</string>
+    <string name="MsgAUS">Australia</string>
+    <string name="MsgNZ">New Zealand</string>
+    <string name="MsgIN">India</string>
+    <string name="MsgPAK">Pakistan</string>
+    <string name="MsgBNG">Bangladesh</string>
+    <string name="MsgUAE">UAE</string>
+    <string name="MsgSA">South Africa</string>
+    <string name="MsgAddSt">Add/Edit Stadium</string>
+    <string name="MsgEdit">Edit</string>
+    <string name="MsgAdd">Add Stadium</string>
+
+    <string name="MsgAsgiriya">Asgiriya</string>
+    <string name="MsgGalle">Galle</string>
+    <string name="MsgMahinda">Mahinda Rajapaksa</string>
+    <string name="MsgSara">P.Sara Oval</string>
+    <string name="MsgPremadasa">R.Premadasa</string>
+    <string name="MsgPalla">Pallekele </string>
+    <string name="MsgTy">Tyrone Fernando</string>
+    <string name="Msgtitle">Edit Stadium</string>
+    <string name="MsgEd">Edit</string>
+
+    <string name="Title">Add New Stadium</string>
+    <string name="MsgStName">Stadium Name</string>
+    <string name="MsgLoc">Location</string>
+    <string name="Seats">Seating Capacity</string>
+    <string name="noMatches">Number of Matches</string>
+    <string name="size">Size</string>
+    <string name="ImgCo">Image of Country</string>
+    <string name="ImgSt">Image of Stadium</string>
+    <string name="btnAdd">Add</string>
+
+
+    <string name="btnDel">Delete</string>
+    <string name="btnUpd">Update</string>
+    <string name="TitleEdit">Edit Stadium</string>
+
+    <string name="MsgSeat">SEATS</string>
+    <string name="Msgsize">SIZE</string>
+    <string name="MsgMatches">MATCHES</string>
+    <string name="MsgInfo">STADIUM INFO</string>
+    <string name="MsgWC">World Cup Matches</string>
+    <string name="MsgWCValue">3</string>
+    <string name="MsgSeatsValue">35 000</string>
+    <string name="MsgSizeValue">80m(long),75m(wide)</string>
+    <string name="MsgTotMatches">46</string>
+    <string name="MsgTest">Test Matches</string>
+    <string name="MsgTestVal">6</string>
+    <string name="MsgODI">ODI Matches</string>
+    <string name="MsgODIVal">19</string>
+    <string name="MsgT20">T20 Matches</string>
+    <string name="MsgT20Val">18</string>
+    <string name="MsgSt">Pallakella International Cricket Stadium, Pallekela</string>
+    <string name="MsgStMatches">Stadium Matches</string>
+    <string name="MsgTitle">Edit Stadium details</string>
+    <string name="titleStadium">Stadium</string>
+    <string name="AdminStadium">Admin-Stadium</string>
+    <string name="adMatch">Admin-Match</string>
+    <string name="UseStad">User-Stadium</string>
+    <string name="UserMatch">User-Match</string>
+    <string name="msgMa">View Matches in Stadium</string>
 </resources>

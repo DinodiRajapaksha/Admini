@@ -40,6 +40,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
+        // To Stadiums
+
+        card_view4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                 Intent intent = new Intent(MainActivity.this,AdminStadium.class);
+                 startActivity(intent);
+            }
+        });
+
 
     }
 }

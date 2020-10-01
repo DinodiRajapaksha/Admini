@@ -57,6 +57,10 @@
             android:label="Match Details"
             android:parentActivityName=".tournaments.tournament.viewForTwo"  />
 
+        <activity android:name=".tournaments.tournament.stadiumAdd" />
+        <activity android:name=".tournaments.tournament.stadiumEdit" />
+        <activity android:name=".tournaments.tournament.countryStadium" />
+        <activity android:name=".tournaments.tournament.AdminStadium" />
 
 
 
