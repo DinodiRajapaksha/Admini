@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="teams_array">
+        <item>Team Type</item>
+        <item>National</item>
+        <item>IPL</item>
+        <item>England County</item>
+        <item>Sri Lanka Provincial</item>
+    </string-array>
+</resources>

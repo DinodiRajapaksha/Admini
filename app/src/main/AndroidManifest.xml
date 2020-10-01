@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.mad.admini">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+    <activity
+        android:name=".tournaments.tournament.MainActivity"
+        android:label="@string/app_name" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+
+        <activity
+            android:name=".tournaments.tournament.TournamentList"
+            android:label="Tournaments"
+            android:parentActivityName=".tournaments.tournament.MainActivity" />
+
+            <activity
+                android:name=".tournaments.tournament.addTournamentDetails"
+                android:label="Add Tournament"
+                android:parentActivityName=".tournaments.tournament.TournamentList" />
+            <activity
+                android:name=".tournaments.tournament.viewTournament"
+                android:label="View Details"
+                android:parentActivityName=".tournaments.tournament.TournamentList" />
+
+                <activity
+                    android:name=".tournaments.tournament.viewForTwo"
+                    android:label="Add Details"
+                    android:parentActivityName=".tournaments.tournament.addTournamentDetails"/>
+                <activity
+                    android:name=".tournaments.tournament.vTournamentDetails"
+                    android:label="Tournament Details"
+                    android:parentActivityName=".tournaments.tournament.viewTournament" />
+                <activity
+                    android:name=".tournaments.tournament.vMatchDetails"
+                    android:label="Match Details"
+                    android:parentActivityName=".tournaments.tournament.viewTournament" />
+                <activity
+                    android:name=".tournaments.tournament.vTLUDetails"
+                    android:label="Team Line-Up"
+                    android:parentActivityName=".tournaments.tournament.viewTournament"  />
+        <activity
+            android:name=".tournaments.tournament.aMatchDetails"
+            android:label="Match Details"
+            android:parentActivityName=".tournaments.tournament.viewForTwo"  />
+
+        <activity android:name=".tournaments.tournament.stadiumAdd" />
+        <activity android:name=".tournaments.tournament.stadiumEdit" />
+        <activity android:name=".tournaments.tournament.countryStadium" />
+        <activity android:name=".tournaments.tournament.AdminStadium" />
+
+        <activity android:name=".tournaments.tournament.MerchAdd"
+            android:label="Add Merchandise"
+            android:parentActivityName=".tournaments.tournament.MerchList" />
+        <activity android:name=".tournaments.tournament.MerchEdit"
+            android:label="Edit Merchandise Details"
+            android:parentActivityName=".tournaments.tournament.TicketList"/>
+        <activity android:name=".tournaments.tournament.MerchList"
+            android:label="Merchandise"
+            android:parentActivityName=".tournaments.tournament.MainActivity"/>
+        <activity android:name=".tournaments.tournament.MerchList_cardView" />
+
+        <activity android:name=".tournaments.tournament.TicketAdd"
+            android:label="Add Tickets"
+            android:parentActivityName=".tournaments.tournament.TicketList"/>
+        <activity android:name=".tournaments.tournament.TicketEdit"
+            android:label="Edit Tickets Details"
+            android:parentActivityName=".tournaments.tournament.TicketList"/>
+        <activity android:name=".tournaments.tournament.TicketList"
+            android:label="Tickets"
+            android:parentActivityName=".tournaments.tournament.MainActivity"/>
+        <activity android:name=".tournaments.tournament.ticketList_cardView" />
+
+
+
+
+        <activity android:name=".tournaments.tournament.vUnTLU" />
+        <activity android:name=".tournaments.tournament.vUnMatch" />
+
+        <activity
+        android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+        android:theme="@style/Base.Theme.AppCompat" />
+
+
+<meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+    </application>
+
+</manifest>
