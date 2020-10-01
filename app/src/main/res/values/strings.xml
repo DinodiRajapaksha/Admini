@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Admini</string>
+    <string name="add_tournament_details">Add Tournament Details</string>
+    <string name="team_02">Team 02</string>
+    <string name="team_04">Team 04</string>
+    <string name="team_07">Team 07</string>
+    <string name="no_of_matches">No of Matches</string>
+    <string name="from">From</string>
+    <string name="team_08">Team 08</string>
+    <string name="date">Date</string>
+    <string name="tournament_name">Tournament Name</string>
+    <string name="to">To</string>
+    <string name="hint">hint</string>
+    <string name="team_06">Team 06</string>
+</resources>
