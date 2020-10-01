@@ -37,11 +37,20 @@ public class viewTournament extends AppCompatActivity {
         floatingActionButtonDelvt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String tid = getIntent().getStringExtra("tid");
                 String touName =getIntent().getStringExtra("touName");
+                String touType =getIntent().getStringExtra("touType");
                 String touCountry =getIntent().getStringExtra("touCountry");
                 String fromDate =getIntent().getStringExtra("fromDate");
                 String toDate =getIntent().getStringExtra("toDate");
-                String num =getIntent().getStringExtra("num");
+                Integer teamOne =getIntent().getIntExtra("teamOne", 0);
+                Integer teamTwo =getIntent().getIntExtra("teamTwo", 0);
+                Integer teamThree =getIntent().getIntExtra("teamThree", 0);
+                Integer teamFour =getIntent().getIntExtra("teamFour", 0);
+                Integer teamFive =getIntent().getIntExtra("teamFive", 0);
+                Integer teamSix =getIntent().getIntExtra("teamSix", 0);
+                Integer teamSeven =getIntent().getIntExtra("teamSeven", 0);
+                Integer teamEight =getIntent().getIntExtra("teamEight", 0);
 
 
                 confirmDialog();
@@ -56,21 +65,48 @@ public class viewTournament extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(viewTournament.this, vTournamentDetails.class);
 
+                String tid=getIntent().getStringExtra("tid");
+                String num =getIntent().getStringExtra("num");
                 String touName =getIntent().getStringExtra("touName");
+                String touType =getIntent().getStringExtra("touType");
                 String touCountry =getIntent().getStringExtra("touCountry");
                 String fromDate =getIntent().getStringExtra("fromDate");
                 String toDate =getIntent().getStringExtra("toDate");
-                String num =getIntent().getStringExtra("num");
+                Integer teamOne =getIntent().getIntExtra("teamOne", 0);
+                Integer teamTwo =getIntent().getIntExtra("teamTwo", 0);
+                Integer teamThree =getIntent().getIntExtra("teamThree", 0);
+                Integer teamFour =getIntent().getIntExtra("teamFour", 0);
+                Integer teamFive =getIntent().getIntExtra("teamFive", 0);
+                Integer teamSix =getIntent().getIntExtra("teamSix", 0);
+                Integer teamSeven =getIntent().getIntExtra("teamSeven", 0);
+                Integer teamEight =getIntent().getIntExtra("teamEight", 0);
+                Log.d("dino", ""+teamOne);
 
+                intent.putExtra("tid", tid);
                 intent.putExtra("num", String.valueOf(num));
                 intent.putExtra("touName", String.valueOf(touName));
+                intent.putExtra("touType", String.valueOf(touType));
                 intent.putExtra("touCountry", String.valueOf(touCountry));
                 intent.putExtra("fromDate", String.valueOf(fromDate));
                 intent.putExtra("toDate", String.valueOf(toDate));
+                intent.putExtra("teamOne", (teamOne));
+                intent.putExtra("teamTwo", (teamTwo));
+                intent.putExtra("teamThree", (teamThree));
+                intent.putExtra("teamFour", (teamFour));
+                intent.putExtra("teamFive", (teamFive));
+                intent.putExtra("teamSix", (teamSix));
+                intent.putExtra("teamSeven", (teamSeven));
+                intent.putExtra("teamEight", (teamEight));
 
                 startActivity(intent);
 
-                Log.d("tash", "huh"+ touCountry);
+                Log.d("tidxo", "tid"+ tid);
+                Log.d("numxo", "num"+ num);
+                Log.d("touNamexo", "touName"+ touName);
+                Log.d("touTypexo", "touType"+ touType);
+                Log.d("touCountryxo", "touCountry"+ touCountry);
+                Log.d("fromDatexo", "fromDate"+ fromDate);
+                Log.d("toDatexo", "toDate"+ toDate);
             }
         });
         cardView3for2.setOnClickListener(new View.OnClickListener() {

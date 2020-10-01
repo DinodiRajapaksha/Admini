@@ -1,14 +1,107 @@
 package app.mad.admini.tournaments.tournament.models;
 
 public class Tournament {
-    private Integer tid;
+    private String tid;
     private String num;
     private String touName;
+    private String touType;
     private String touCountry;
     private String fromDate;
     private String toDate;
-    private String touType;
+    private Integer teamOne;
+    private Integer teamTwo;
+    private Integer teamThree;
+    private Integer teamFour;
+    private Integer teamFive;
+    private Integer teamSix;
+    private Integer teamSeven;
+    private Integer teamEight;
 
+    public Tournament(String tid, String num, String touName, String touType,
+                      String touCountry, String fromDate, String toDate,
+                      Integer teamOne, Integer teamTwo, Integer teamThree,
+                      Integer teamFour, Integer teamFive, Integer teamSix, Integer teamSeven, Integer teamEight) {
+        this.tid = tid;
+        this.num = num;
+        this.touName = touName;
+        this.touType = touType;
+        this.touCountry = touCountry;
+        this.fromDate = fromDate;
+        this.toDate = toDate;
+        this.teamOne = teamOne;
+        this.teamTwo = teamTwo;
+        this.teamThree = teamThree;
+        this.teamFour = teamFour;
+        this.teamFive = teamFive;
+        this.teamSix = teamSix;
+        this.teamSeven = teamSeven;
+        this.teamEight = teamEight;
+    }
+
+
+    public Integer getTeamOne() {
+        return teamOne;
+    }
+
+    public void setTeamOne(Integer teamOne) {
+        this.teamOne = teamOne;
+    }
+
+    public Integer getTeamTwo() {
+        return teamTwo;
+    }
+
+    public void setTeamTwo(Integer teamTwo) {
+        this.teamTwo = teamTwo;
+    }
+
+    public Integer getTeamThree() {
+        return teamThree;
+    }
+
+    public void setTeamThree(Integer teamThree) {
+        this.teamThree = teamThree;
+    }
+
+    public Integer getTeamFour() {
+        return teamFour;
+    }
+
+    public void setTeamFour(Integer teamFour) {
+        this.teamFour = teamFour;
+    }
+
+    public Integer getTeamFive() {
+        return teamFive;
+    }
+
+    public void setTeamFive(Integer teamFive) {
+        this.teamFive = teamFive;
+    }
+
+    public Integer getTeamSix() {
+        return teamSix;
+    }
+
+    public void setTeamSix(Integer teamSix) {
+        this.teamSix = teamSix;
+    }
+
+    public Integer getTeamSeven() {
+        return teamSeven;
+    }
+
+    public void setTeamSeven(Integer teamSeven) {
+        this.teamSeven = teamSeven;
+    }
+
+    public Integer getTeamEight() {
+        return teamEight;
+    }
+
+    public void setTeamEight(Integer teamEight) {
+        this.teamEight = teamEight;
+    }
     public String getTouType() {
         return touType;
     }
@@ -21,24 +114,6 @@ public class Tournament {
         this.touType = touType;
     }
 
-    public Tournament(String touName, String num, String fromDate, String toDate, String touCountry, Integer tid, String touType) {
-        this.touName = touName;
-        this.touCountry = touCountry;
-        this.num = num;
-        this.fromDate = fromDate;
-        this.toDate = toDate;
-        this.tid = tid;
-        this.touType = touType;
-    }
-
-    public Tournament(String touName, String num, String fromDate, String toDate, String touCountry, String touType) {
-        this.touName = touName;
-        this.touCountry = touCountry;
-        this.num = num;
-        this.fromDate = fromDate;
-        this.toDate = toDate;
-        this.touType = touType;
-    }
 
     public String getFromDate() {
         return fromDate;
@@ -80,11 +155,11 @@ public class Tournament {
         this.touCountry = touCountry;
     }
 
-    public Integer getTid() {
+    public String getTid() {
         return tid;
     }
 
-    public void setTid(Integer tid) {
+    public void setTid(String tid) {
         this.tid = tid;
     }
 

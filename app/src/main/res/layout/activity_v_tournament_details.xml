@@ -5,7 +5,7 @@
     android:id="@+id/vtouDetails"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".addTournamentDetails">
+    tools:context=".tournaments.tournament.vTournamentDetails">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -106,17 +106,18 @@
                     android:layout_marginTop="325dp"
                     android:background="#A4FFFFFF"
                     android:ems="2"
-                    android:hint="Number Of Matches"
-                    android:inputType="number" />
+                    android:hint="Number Of Matches" />
 
-                <Spinner
-                    android:id="@+id/spinnerV"
+                <EditText
+                    android:id="@+id/teditTouvt"
                     android:layout_width="350dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="375dp"
-                    android:background="#B2FFFFFF"
-                    android:entries="@array/teams_array" />
+                    android:background="#A4FFFFFF"
+                    android:ems="2"
+                    android:hint="Tournament Type"
+                    android:inputType="number" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="350dp"
@@ -134,7 +135,7 @@
                         android:text="  Teams" />
 
                     <CheckBox
-                        android:id="@+id/checkBoxV"
+                        android:id="@+id/teamOne"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="20dp"
@@ -143,7 +144,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox2V"
+                        android:id="@+id/teamTwo"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="20dp"
@@ -152,7 +153,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox3V"
+                        android:id="@+id/teamThree"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="20dp"
@@ -161,7 +162,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox4V"
+                        android:id="@+id/teamFour"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="20dp"
@@ -170,7 +171,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox5V"
+                        android:id="@+id/teamFive"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="200dp"
@@ -179,7 +180,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox6V"
+                        android:id="@+id/teamSix"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="200dp"
@@ -188,7 +189,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox7V"
+                        android:id="@+id/teamSeven"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="200dp"
@@ -197,7 +198,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox8V"
+                        android:id="@+id/teamEight"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="200dp"

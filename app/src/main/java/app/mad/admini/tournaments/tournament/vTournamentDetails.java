@@ -8,13 +8,17 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 import app.mad.admini.R;
@@ -24,19 +28,21 @@ import app.mad.admini.tournaments.tournament.models.Tournament;
 public class vTournamentDetails extends AppCompatActivity {
 
 
-    EditText txteditNamevt, txteditNumvt, txteditCountryvt;
+    EditText txteditNamevt, txteditNumvt, txteditCountryvt, txteditTouvt;
     Button btnTEditV;
     TextView tdisplayDatevt;
     TextView tdisplayDatexvt;
     DatePickerDialog.OnDateSetListener tdateSetListenervt;
     DatePickerDialog.OnDateSetListener tdateSetListenerxvt;
+    CheckBox teamOne, teamTwo, teamThree, teamFour, teamFive, teamSix, teamSeven, teamEight;
 
     databaseHelper dbh;
 
-    String touNamevt, touCountryvt, fromDatevt, toDatevt, touType;
-    Integer numvt;
+    String touNamevt, numvt, touCountryvt, fromDatevt, toDatevt, touTypevt, tid;
+    Integer teamOneI, teamTwoI, teamThreeI, teamFourI, teamFiveI, teamSixI, teamSevenI, teamEightI;
+    Boolean teamOneB, teamTwoB, teamThreeB, teamFourB, teamFiveB, teamSixB, teamSevenB, teamEightB;
 
-    Tournament tournament;
+    // Tournament tournament;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,10 +53,19 @@ public class vTournamentDetails extends AppCompatActivity {
 
 
         txteditNamevt   = findViewById(R.id.teditNamevt);
+        txteditTouvt    = findViewById(R.id.teditTouvt);
         txteditCountryvt= findViewById(R.id.teditCountryvt);
         txteditNumvt    = findViewById(R.id.teditNumvt);
         tdisplayDatevt  = findViewById(R.id.datetovtvt);
         tdisplayDatexvt = findViewById(R.id.datefromvtvt);
+        teamOne       = (CheckBox)findViewById(R.id.teamOne);
+        teamTwo       = (CheckBox)findViewById(R.id.teamTwo);
+        teamThree     = (CheckBox)findViewById(R.id.teamThree);
+        teamFour      = (CheckBox)findViewById(R.id.teamFour);
+        teamFive      = (CheckBox)findViewById(R.id.teamFive);
+        teamSix       = (CheckBox)findViewById(R.id.teamSix);
+        teamSeven     = (CheckBox)findViewById(R.id.teamSeven);
+        teamEight     = (CheckBox)findViewById(R.id.teamEight);
 
         btnTEditV    = findViewById(R.id.btnTEditV);
 
@@ -62,11 +77,58 @@ public class vTournamentDetails extends AppCompatActivity {
                 Tournament tournament;
 
                 tournament = new Tournament(
-                        txteditNamevt.getText().toString(),
+                        tid,
                         txteditNumvt.getText().toString(),
+                        txteditNamevt.getText().toString(),
                         txteditCountryvt.getText().toString(),
+                        txteditTouvt.getText().toString(),
                         tdisplayDatevt.getText().toString(),
-                        tdisplayDatexvt.getText().toString(), touType);
+                        tdisplayDatexvt.getText().toString(),
+                        teamOneI, teamTwoI,teamThreeI, teamFourI,
+                        teamFiveI, teamSixI, teamSevenI, teamEightI);
+
+                while(teamOne.isChecked()){
+                    teamOneB = true;
+                    teamOneI = (teamOneB) ? 1 : 0;
+                    tournament.setTeamOne(teamOneI);
+                    break;
+                }
+                while(teamTwo.isChecked()){
+                    teamTwoB = true;
+                    teamTwoI = (teamTwoB) ? 1 : 0;
+                    tournament.setTeamTwo(teamTwoI);
+                    break;
+                }
+                while(teamThree.isChecked()){
+                    teamThreeB = true;
+                    teamThreeI = (teamThreeB) ? 1 : 0;
+                    break;
+                }
+                while(teamFour.isChecked()){
+                    teamFourB = true;
+                    teamFourI = (teamFourB) ? 1 : 0;
+                    break;
+                }
+                while(teamFive.isChecked()){
+                    teamFiveB= true;
+                    teamOneI = (teamOneB) ? 1 : 0;
+                    break;
+                }
+                while(teamSix.isChecked()){
+                    teamSixB= true;
+                    teamSixI = (teamSixB) ? 1 : 0;
+                    break;
+                }
+                while(teamSeven.isChecked()){
+                    teamSevenB= true;
+                    teamSevenI = (teamSevenB) ? 1 : 0;
+                    break;
+                }
+                while(teamEight.isChecked()){
+                    teamEightB= true;
+                    teamEightI = (teamEightB) ? 1 : 0;
+                    break;
+                }
 
                 dbh.updateTous(tournament);
 
@@ -148,24 +210,70 @@ public class vTournamentDetails extends AppCompatActivity {
     void getsetIntentData(){
         if(getIntent().hasExtra("num")
                 && getIntent().hasExtra("touName")
+                && getIntent().hasExtra("touType")
                 && getIntent().hasExtra("touCountry")
                 && getIntent().hasExtra("fromDate")
-                && getIntent().hasExtra("toDate") ){
+                && getIntent().hasExtra("toDate")
+                && getIntent().hasExtra("teamOne")
+                && getIntent().hasExtra("teamTwo")
+                && getIntent().hasExtra("teamThree")
+                && getIntent().hasExtra("teamFour")
+                && getIntent().hasExtra("teamFive")
+                && getIntent().hasExtra("teamSix")
+                && getIntent().hasExtra("teamSeven")
+                && getIntent().hasExtra("teamEight") ){
 
             //getData
+            numvt        = getIntent().getStringExtra("num");
             touNamevt    = getIntent().getStringExtra("touName");
+            touTypevt    = getIntent().getStringExtra("touType");
             touCountryvt = getIntent().getStringExtra("touCountry");
             fromDatevt   = getIntent().getStringExtra("fromDate");
             toDatevt     = getIntent().getStringExtra("toDate");
-           // numvt        = getIntent().getIntExtra("num", 0);
+            teamOneI      =getIntent().getIntExtra("teamOne", 0);
+            teamTwoI      =getIntent().getIntExtra("teamTwo", 0);
+            teamThreeI    =getIntent().getIntExtra("teamThree", 0);
+            teamFourI     =getIntent().getIntExtra("teamFour", 0);
+            teamFiveI     =getIntent().getIntExtra("teamFive", 0);
+            teamSixI      =getIntent().getIntExtra("teamSix", 0);
+            teamSevenI    =getIntent().getIntExtra("teamSeven", 0);
+            teamEightI    =getIntent().getIntExtra("teamEight", 0);
 
 
             //setData
+
+            txteditNumvt.setText(numvt);
             txteditNamevt.setText(touNamevt);
+            txteditTouvt.setText(touTypevt);
             txteditCountryvt.setText(touCountryvt);
-            tdisplayDatevt.setText(toDatevt);
             tdisplayDatexvt.setText(fromDatevt);
-          //  txteditNum.setText(num);
+            tdisplayDatevt.setText(toDatevt);
+
+
+            while(teamOneI==1){
+                teamOne.setChecked(true);
+                break;}
+            while(teamTwoI==1){
+                teamTwo.setChecked(true);
+                break;}
+            while(teamThreeI==1){
+                teamThree.setChecked(true);
+                break;}
+            while(teamFourI==1){
+                teamFour.setChecked(true);
+                break;}
+            while(teamFiveI==1){
+                teamFive.setChecked(true);
+                break;}
+            while(teamSixI==1){
+                teamSix.setChecked(true);
+                break;}
+            while(teamSevenI==1){
+                teamSeven.setChecked(true);
+                break;}
+            while(teamEightI==1){
+                teamEight.setChecked(true);
+                break;}
 
 
 

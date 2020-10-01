@@ -3,6 +3,8 @@ package app.mad.admini.tournaments.tournament.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,26 +25,40 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     Activity activity;
     private Context context;
-    private ArrayList touName,  num,fromDate, toDate, touCountry;
-    private ArrayList<Integer> tid;
+    private ArrayList touName,  num, touType, fromDate, toDate, touCountry, tid;
+    private ArrayList<Boolean> teamOne, teamTwo, teamThree, teamFour, teamFive, teamSix, teamSeven, teamEight;
+    Bundle extrasOut = new Bundle();
 
     public CustomAdapter(Activity activity,
                          Context context,
-                         ArrayList tid,
-                         ArrayList num,
-                         ArrayList touName,
-                         ArrayList touCountry,
-                         ArrayList fromDate,
-                         ArrayList toDate){
+                         ArrayList tid, ArrayList num,
+                         ArrayList touName, ArrayList touType,
+                         ArrayList touCountry, ArrayList fromDate,
+                         ArrayList toDate, ArrayList teamOne,
+                         ArrayList teamTwo, ArrayList teamThree,
+                         ArrayList teamFour, ArrayList teamFive,
+                         ArrayList teamSix, ArrayList teamSeven, ArrayList teamEight ){
         this.activity = activity;
         this.context    = context;
         this.tid = tid;
         this.num = num;
         this.touName    = touName;
+        this.touType    = touType;
         this.touCountry = touCountry;
         this.fromDate   = fromDate;
         this.toDate     = toDate;
+        this.teamOne    = teamOne;
+        this.teamTwo    = teamTwo;
+        this.teamThree  = teamThree;
+        this.teamFour   = teamFour;
+        this.teamFive   = teamFive;
+        this.teamSix    = teamSix;
+        this.teamSeven  = teamSeven;
+        this.teamEight  = teamEight;
+
     }
+
+
 
     @NonNull
     @Override
@@ -64,17 +80,33 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, viewTournament.class);
+                intent.putExtra("tid", String.valueOf(tid.get(position)));
                 intent.putExtra("num", String.valueOf(num.get(position)));
                 intent.putExtra("touName", String.valueOf(touName.get(position)));
+                intent.putExtra("touType", String.valueOf(touType.get(position)));
                 intent.putExtra("touCountry", String.valueOf(touCountry.get(position)));
                 intent.putExtra("fromDate", String.valueOf(fromDate.get(position)));
                 intent.putExtra("toDate", String.valueOf(toDate.get(position)));
+                intent.putExtra("teamOne", (teamOne.get(position)));
+                intent.putExtra("teamTwo", (teamTwo.get(position)));
+                intent.putExtra("teamThree", (teamThree.get(position)));
+                intent.putExtra("teamFour", (teamFour.get(position)));
+                intent.putExtra("teamFive", (teamFive.get(position)));
+                intent.putExtra("teamSix", (teamSix.get(position)));
+                intent.putExtra("teamSeven", (teamSeven.get(position)));
+                intent.putExtra("teamEight", (teamEight.get(position)));
+
+
+                Log.d("dino12", ""+teamOne);
+
                 activity.startActivityForResult(intent, 1);
             }
         });
+        Log.d("dulmev", "huhu"+tid);
 
 
     }
+
 
     @Override
     public int getItemCount() {
@@ -91,7 +123,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtVTouName  = itemView.findViewById(R.id.txtVTouName);
+            txtVTouName  = itemView.findViewById(R.id.txtATouName);
             txtVTouFDate = itemView.findViewById(R.id.txtVTouFDate);
             txtVTouTDate = itemView.findViewById(R.id.txtVTouTDate);
 

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -25,8 +26,8 @@ public class TournamentList extends AppCompatActivity {
     FloatingActionButton addT_btn;
 
     databaseHelper dbh;
-    ArrayList<String> touName, touCountry, fromDate, toDate;
-    ArrayList<Integer> num, tid;
+    ArrayList<String> touName, touCountry, fromDate, toDate, touType, num, tid;
+    ArrayList<Integer> teamOne, teamTwo, teamThree, teamFour, teamFive, teamSix, teamSeven, teamEight;
     CustomAdapter customAdapter;
 
     @Override
@@ -47,18 +48,29 @@ public class TournamentList extends AppCompatActivity {
 
 
 
-
         dbh = new databaseHelper(TournamentList.this);
         tid        = new ArrayList<>();
         num        = new ArrayList<>();
         touName    = new ArrayList<>();
+        touType    = new ArrayList<>();
         touCountry = new ArrayList<>();
         fromDate   = new ArrayList<>();
         toDate     = new ArrayList<>();
+        teamOne    = new ArrayList<>();
+        teamTwo    = new ArrayList<>();
+        teamThree  = new ArrayList<>();
+        teamFour   = new ArrayList<>();
+        teamFive   = new ArrayList<>();
+        teamSix    = new ArrayList<>();
+        teamSeven  = new ArrayList<>();
+        teamEight  = new ArrayList<>();
+
+        Log.d("tid" ,"tid"+touName);
 
         storeDataInArray();
 
-        customAdapter = new CustomAdapter(TournamentList.this, this,tid, num, touName, touCountry, fromDate, toDate);
+        customAdapter = new CustomAdapter(TournamentList.this, this,tid, num, touName, touType, touCountry, fromDate, toDate,
+                teamOne, teamTwo, teamThree, teamFour, teamFive, teamSix, teamSeven, teamEight);
         recyclerViewTL.setAdapter(customAdapter);
         recyclerViewTL.setLayoutManager(new LinearLayoutManager(TournamentList.this));
     }
@@ -77,13 +89,24 @@ public class TournamentList extends AppCompatActivity {
             Toast.makeText(this, "No Data", Toast.LENGTH_SHORT).show();
         }else{
             while (c.moveToNext()){
-               // tid.add(c.getInt(0));
-                num.add(c.getInt(1));
+                tid.add(c.getString(0));
+                num.add(c.getString(1));
                 touName.add(c.getString(2));
-                touCountry.add(c.getString(3));
-                fromDate.add(c.getString(4));
-                toDate.add(c.getString(5));
+                touType.add(c.getString(3));
+                touCountry.add(c.getString(4));
+                fromDate.add(c.getString(5));
+                toDate.add(c.getString(6));
+                teamOne.add(c.getInt(7));
+                teamTwo.add(c.getInt(8));
+                teamThree.add(c.getInt(9));
+                teamFour.add(c.getInt(10));
+                teamFive.add(c.getInt(11));
+                teamSix.add(c.getInt(12));
+                teamSeven.add(c.getInt(13));
+                teamEight.add(c.getInt(14));
             }
         }
+        Log.d("dino1", ""+teamOne);
+
     }
 }

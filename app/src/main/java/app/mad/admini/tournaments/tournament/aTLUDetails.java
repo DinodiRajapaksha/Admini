@@ -16,7 +16,7 @@ import app.mad.admini.R;
 
 import static java.lang.Integer.parseInt;
 
-public class aMatchDetails extends AppCompatActivity {
+public class aTLUDetails extends AppCompatActivity {
 
     ListView listMatch;
     Integer match_numb;
@@ -26,7 +26,7 @@ public class aMatchDetails extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_a_match_details);
+        setContentView(R.layout.activity_a_tlu_details);
 
         num =getIntent().getStringExtra("num");
         meow= parseInt(num);
@@ -35,9 +35,9 @@ public class aMatchDetails extends AppCompatActivity {
 
         listMatch = (ListView)findViewById(R.id.listMatch);
         ArrayList<String > arrayList = new ArrayList<>();
-        for(int x=1; x<=meow; x++){
+        for(int x=1; x<=11; x++){
 
-            arrayList.add("      Match "+x+" of "+meow);
+            arrayList.add("      Player "+x+" of "+11);
         }
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,arrayList);
         listMatch.setAdapter(arrayAdapter);
@@ -45,7 +45,7 @@ public class aMatchDetails extends AppCompatActivity {
         listMatch.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(aMatchDetails.this, vUnMatch.class);
+                Intent intent = new Intent(aTLUDetails.this, vUnMatch.class);
                 intent.putExtra("num", String.valueOf(num));
                 Log.d("blehxx", "too"+num);
                 startActivity(intent);

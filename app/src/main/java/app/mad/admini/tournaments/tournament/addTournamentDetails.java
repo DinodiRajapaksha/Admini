@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -22,8 +24,7 @@ import app.mad.admini.R;
 import app.mad.admini.tournaments.tournament.helper.databaseHelper;
 import app.mad.admini.tournaments.tournament.models.Tournament;
 
-public class addTournamentDetails extends AppCompatActivity
-implements AdapterView.OnItemSelectedListener {
+public class addTournamentDetails extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     EditText txteditName, txteditNum, txteditCountry;
     Button btnTSubmit;
@@ -32,8 +33,12 @@ implements AdapterView.OnItemSelectedListener {
     DatePickerDialog.OnDateSetListener tdateSetListener;
     DatePickerDialog.OnDateSetListener tdateSetListenerx;
     Spinner spinner;
+    CheckBox teamOne, teamTwo, teamThree, teamFour, teamFive, teamSix, teamSeven, teamEight;
+    Boolean teamOneB, teamTwoB, teamThreeB, teamFourB, teamFiveB, teamSixB, teamSevenB, teamEightB;
+    Integer teamOneI, teamTwoI, teamThreeI, teamFourI, teamFiveI, teamSixI, teamSevenI, teamEightI;
 
-    String touType;
+
+    String touType,tid;
 
     databaseHelper dbh;
 
@@ -51,6 +56,14 @@ implements AdapterView.OnItemSelectedListener {
         txteditNum    = findViewById(R.id.teditNum);
         tdisplayDate  = (TextView) findViewById(R.id.dateto);
         tdisplayDatex = (TextView) findViewById(R.id.datefrom);
+        teamOne       = (CheckBox)findViewById(R.id.teamOne);
+        teamTwo       = (CheckBox)findViewById(R.id.teamTwo);
+        teamThree     = (CheckBox)findViewById(R.id.teamThree);
+        teamFour      = (CheckBox)findViewById(R.id.teamFour);
+        teamFive      = (CheckBox)findViewById(R.id.teamFive);
+        teamSix       = (CheckBox)findViewById(R.id.teamSix);
+        teamSeven     = (CheckBox)findViewById(R.id.teamSeven);
+        teamEight     = (CheckBox)findViewById(R.id.teamEight);
 
         btnTSubmit    = findViewById(R.id.btnTSubmit);
 
@@ -60,17 +73,64 @@ implements AdapterView.OnItemSelectedListener {
             public void onClick(View viewx) {
                 databaseHelper dbh = new databaseHelper(addTournamentDetails.this);
                 Tournament tournament;
+                while(teamOne.isChecked()){
+                    teamOneB = true;
+                    teamOneI = (teamOneB) ? 1 : 0;
+                    break;
+                }
+                while(teamTwo.isChecked()){
+                    teamTwoB = true;
+                    teamTwoI = (teamTwoB) ? 1 : 0;
+                    break;
+                }
+                while(teamThree.isChecked()){
+                    teamThreeB = true;
+                    teamThreeI = (teamThreeB) ? 1 : 0;
+                    break;
+                }
+                while(teamFour.isChecked()){
+                    teamFourB = true;
+                    teamFourI = (teamFourB) ? 1 : 0;
+                    break;
+                }
+                while(teamFive.isChecked()){
+                    teamFiveB= true;
+                    teamOneI = (teamOneB) ? 1 : 0;
+                    break;
+                }
+                while(teamSix.isChecked()){
+                    teamSixB= true;
+                    teamSixI = (teamSixB) ? 1 : 0;
+                    break;
+                }
+                while(teamSeven.isChecked()){
+                    teamSevenB= true;
+                    teamSevenI = (teamSevenB) ? 1 : 0;
+                    break;
+                }
+                while(teamEight.isChecked()){
+                    teamEightB= true;
+                    teamEightI = (teamEightB) ? 1 : 0;
+                    break;
+                }
 
                 tournament = new Tournament(
-                        txteditName.getText().toString(),
+                        tid,
                         txteditNum.getText().toString(),
+                        txteditName.getText().toString(),
+                        touType,
                         txteditCountry.getText().toString(),
                         tdisplayDate.getText().toString(),
-                        tdisplayDatex.getText().toString(), touType);
-
-                dbh.addTou(tournament);
+                        tdisplayDatex.getText().toString(),
+                        teamOneI, teamTwoI, teamThreeI, teamFourI,
+                        teamFiveI, teamSixI, teamSevenI, teamEightI);
 
                 String num = txteditNum.getText().toString();
+
+                Log.d("teamsss", String.valueOf(teamOneI));
+                Log.d("teamsss", String.valueOf(teamOneB));
+
+                dbh.addTou(tournament);
 
                 Intent intent = new Intent(addTournamentDetails.this, viewForTwo.class);
                 intent.putExtra("num", num);

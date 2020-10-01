@@ -56,7 +56,10 @@
             android:name=".tournaments.tournament.aMatchDetails"
             android:label="Match Details"
             android:parentActivityName=".tournaments.tournament.viewForTwo"  />
-
+        <activity
+            android:name=".tournaments.tournament.aTLUDetails"
+            android:label="Team Line-Up Details"
+            android:parentActivityName=".tournaments.tournament.viewForTwo"  />
 
 
 

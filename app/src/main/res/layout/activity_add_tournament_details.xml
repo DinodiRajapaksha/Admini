@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".addTournamentDetails">
+    tools:context=".tournaments.tournament.addTournamentDetails">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -74,7 +74,7 @@
                         android:text="  Teams" />
 
                     <CheckBox
-                        android:id="@+id/checkBox"
+                        android:id="@+id/teamOne"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="20dp"
@@ -83,7 +83,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox2"
+                        android:id="@+id/teamTwo"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="20dp"
@@ -92,7 +92,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox3"
+                        android:id="@+id/teamThree"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="20dp"
@@ -101,7 +101,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox4"
+                        android:id="@+id/teamFour"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="20dp"
@@ -110,7 +110,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox5"
+                        android:id="@+id/teamFive"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="200dp"
@@ -119,7 +119,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox6"
+                        android:id="@+id/teamSix"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="200dp"
@@ -128,7 +128,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox7"
+                        android:id="@+id/teamSeven"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="200dp"
@@ -137,7 +137,7 @@
                         android:textSize="12sp" />
 
                     <CheckBox
-                        android:id="@+id/checkBox8"
+                        android:id="@+id/teamEight"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_marginLeft="200dp"

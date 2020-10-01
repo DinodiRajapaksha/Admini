@@ -23,10 +23,21 @@ public class databaseHelper extends SQLiteOpenHelper {
 
     //table tournaments
     private static final String COL_TOU_NAME = "touName";
+    private static final String COL_TOU_TYPE = "touType";
     private static final String COL_NUM = "num";
     private static final String COL_TOU_COUNTRY = "touCountry";
     private static final String COL_FROM_DATE = "fromDate";
     private static final String COL_TO_DATE = "toDate";
+    private static final String COL_TO_TEAM_ONE = "teamOne";
+    private static final String COL_TO_TEAM_TWO = "teamTwo";
+    private static final String COL_TO_TEAM_THREE = "teamThree";
+    private static final String COL_TO_TEAM_FOUR = "teamFour";
+    private static final String COL_TO_TEAM_FIVE = "teamFive";
+    private static final String COL_TO_TEAM_SIX = "teamSix";
+    private static final String COL_TO_TEAM_SEVEN = "teamSeven";
+    private static final String COL_TO_TEAM_EIGHT = "teamEight";
+
+
 
     private static final String COL_MATCH_ID = "mid";
     private static final String COL_MATCH_TYPE = "matchType";
@@ -42,9 +53,18 @@ public class databaseHelper extends SQLiteOpenHelper {
             + TABLE_TOU + "(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + COL_NUM + " INTEGER,"
             + COL_TOU_NAME + " TEXT,"
+            + COL_TOU_TYPE + " TEXT,"
             + COL_TOU_COUNTRY + " TEXT,"
             + COL_FROM_DATE + " TEXT,"
-            + COL_TO_DATE + " TEXT);";
+            + COL_TO_DATE + " TEXT,"
+            + COL_TO_TEAM_ONE + " INTEGER,"
+            + COL_TO_TEAM_TWO + " INTEGER,"
+            + COL_TO_TEAM_THREE + " INTEGER,"
+            + COL_TO_TEAM_FOUR + " INTEGER,"
+            + COL_TO_TEAM_FIVE + " INTEGER,"
+            + COL_TO_TEAM_SIX + " INTEGER,"
+            + COL_TO_TEAM_SEVEN + " INTEGER,"
+            + COL_TO_TEAM_EIGHT + " INTEGER);";
 
     private static final String CREATE_TABLE_MAT = "CREATE TABLE "
             + TABLE_MAT + "(" + COL_MATCH_ID + " TEXT,"
@@ -91,9 +111,20 @@ public class databaseHelper extends SQLiteOpenHelper {
 
         values.put(COL_NUM, tournament.getNum());
         values.put(COL_TOU_NAME, tournament.getTouName());
+        values.put(COL_TOU_TYPE, tournament.getTouType());
         values.put(COL_TOU_COUNTRY, tournament.getTouCountry());
         values.put(COL_FROM_DATE, tournament.getFromDate());
         values.put(COL_TO_DATE, tournament.getToDate());
+        values.put(COL_TO_TEAM_ONE, tournament.getTeamOne());
+        values.put(COL_TO_TEAM_TWO, tournament.getTeamTwo());
+        values.put(COL_TO_TEAM_THREE, tournament.getTeamThree());
+        values.put(COL_TO_TEAM_FOUR, tournament.getTeamFour());
+        values.put(COL_TO_TEAM_FIVE, tournament.getTeamFive());
+        values.put(COL_TO_TEAM_SIX, tournament.getTeamSix());
+        values.put(COL_TO_TEAM_SEVEN, tournament.getTeamSeven());
+        values.put(COL_TO_TEAM_EIGHT, tournament.getTeamEight());
+
+
 
         // insert row
         long insert = sqLiteDatabase.insert(TABLE_TOU, null, values);
@@ -154,9 +185,18 @@ public class databaseHelper extends SQLiteOpenHelper {
 
         values.put(COL_NUM, tournament.getNum());
         values.put(COL_TOU_NAME, tournament.getTouName());
+        values.put(COL_TOU_TYPE, tournament.getTouType());
         values.put(COL_TOU_COUNTRY, tournament.getTouCountry());
         values.put(COL_FROM_DATE, tournament.getToDate());
         values.put(COL_TO_DATE, tournament.getFromDate());
+        values.put(COL_TO_TEAM_ONE, tournament.getTeamOne());
+        values.put(COL_TO_TEAM_TWO, tournament.getTeamTwo());
+        values.put(COL_TO_TEAM_THREE, tournament.getTeamThree());
+        values.put(COL_TO_TEAM_FOUR, tournament.getTeamFour());
+        values.put(COL_TO_TEAM_FIVE, tournament.getTeamFive());
+        values.put(COL_TO_TEAM_SIX, tournament.getTeamSix());
+        values.put(COL_TO_TEAM_SEVEN, tournament.getTeamSeven());
+        values.put(COL_TO_TEAM_EIGHT, tournament.getTeamEight());
 
 
         // updating row

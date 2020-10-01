@@ -33,13 +33,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        /*card_view5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(app.mad.admini.tournaments.tournament.MainActivity.this, UserTeamCategoty.class));
-            }
-        });*/
-
 
     }
 }
