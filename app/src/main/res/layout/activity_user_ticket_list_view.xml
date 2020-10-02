@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserTicketListView">
+
+    <ListView
+        android:id="@+id/blocklistview"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+    android:id="@+id/bottomBar"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomBarNav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:itemBackground="@color/colorPrimaryDark"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemRippleColor="#FFC107"
+        app:layout_behavior="com.mypackage.BottomNavigationBehavior"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_user" />
+
+</RelativeLayout>
+
+
+    </FrameLayout>

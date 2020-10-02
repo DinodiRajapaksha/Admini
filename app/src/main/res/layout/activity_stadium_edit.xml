@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FBF0DC"
+    android:backgroundTint="#FBF0DC"
+    tools:context=".stadiumEdit">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/anav"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/txtTitleEdit"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="668dp"
+        android:background="#FFBB00"
+        android:text="@string/TitleEdit"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtStNameEdit"
+        android:layout_width="349dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="124dp"
+        android:ems="10"
+        android:hint="@string/MsgStName"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCountryEdit"
+        android:layout_width="154dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="476dp"
+        android:ems="10"
+        android:hint="@string/MsgCountry"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/txtLocationEdit"
+        android:layout_width="159dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:hint="@string/MsgLoc"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtCountryEdit"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/txtSeatsEdit"
+        android:layout_width="158dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="312dp"
+        android:layout_marginEnd="220dp"
+        android:ems="10"
+        android:hint="@string/Seats"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/txtSizeEdit"
+        android:layout_width="160dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="28dp"
+        android:ems="10"
+        android:hint="@string/size"
+        android:inputType="textPersonName"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtSeatsEdit"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <EditText
+        android:id="@+id/txtInfoEdit"
+        android:layout_width="336dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="432dp"
+        android:layout_marginEnd="36dp"
+        android:ems="10"
+        android:hint="@string/MsgInfo"
+        android:inputType="textPersonName"
+        android:textAllCaps="false"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnUpdateStadium"
+        android:layout_width="155dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="128dp"
+        android:backgroundTint="#5C453E"
+        android:text="@string/btnUpd"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
