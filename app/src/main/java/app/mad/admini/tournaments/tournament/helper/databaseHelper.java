@@ -17,6 +17,7 @@ public class databaseHelper extends SQLiteOpenHelper {
     //tables
     private static final String TABLE_TOU = "tournaments";
     private static final String TABLE_MAT = "matches";
+    private static final String TABLE_USER = "user";
 
     //common cols
     private static final String KEY_ID = "id";
@@ -48,6 +49,11 @@ public class databaseHelper extends SQLiteOpenHelper {
     private static final String COL_TEAM02 = "team02";
 
 
+
+    private static final String COL_USER_NAME = "uName";
+    private static final String COL_USER_PWD = "uPwd";
+
+
     //create TABLE_TOU
     private static final String CREATE_TABLE_TOU = "CREATE TABLE "
             + TABLE_TOU + "(" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
@@ -75,6 +81,10 @@ public class databaseHelper extends SQLiteOpenHelper {
             + COL_TEAM01 + " TEXT,"
             + COL_TEAM02 + " TEXT);";
 
+    private static final String CREATE_TABLE_USER = "CREATE TABLE "
+            + TABLE_USER + "(" + COL_USER_NAME + " TEXT,"
+            + COL_USER_PWD + " TEXT);";
+
     private Context context;
 
 
@@ -89,6 +99,7 @@ public class databaseHelper extends SQLiteOpenHelper {
         // creating required tables
         sqLiteDatabase.execSQL(CREATE_TABLE_TOU);
         sqLiteDatabase.execSQL(CREATE_TABLE_MAT);
+        sqLiteDatabase.execSQL(CREATE_TABLE_USER);
 
     }
 
@@ -98,6 +109,7 @@ public class databaseHelper extends SQLiteOpenHelper {
         // on upgrade drop older tables
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_TOU);
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_MAT);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_USER);
 
         // create new tables
         onCreate(sqLiteDatabase);

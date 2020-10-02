@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
 
     <activity
-        android:name=".tournaments.tournament.MainActivity"
+        android:name=".tournaments.tournament.one"
         android:label="@string/app_name" >
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -20,6 +20,17 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
+
+
+        <activity
+            android:name=".tournaments.tournament.login"
+            android:label="Welcome" />
+        <activity
+            android:name=".tournaments.tournament.MainActivity"
+            android:label="Tournaments"
+            android:windowSoftInputMode="adjustNothing"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:parentActivityName=".tournaments.tournament.login" />
 
 
         <activity
@@ -66,6 +77,34 @@
 
         <activity android:name=".tournaments.tournament.vUnTLU" />
         <activity android:name=".tournaments.tournament.vUnMatch" />
+
+
+        <activity android:name=".tournaments.tournament.stadiumAdd" />
+        <activity android:name=".tournaments.tournament.stadiumEdit" />
+        <activity android:name=".tournaments.tournament.countryStadium" />
+        <activity android:name=".tournaments.tournament.AdminStadium" />
+
+        <activity android:name=".tournaments.tournament.MerchAdd"
+            android:label="Add Merchandise"
+            android:parentActivityName=".tournaments.tournament.MerchList" />
+        <activity android:name=".tournaments.tournament.MerchEdit"
+            android:label="Edit Merchandise Details"
+            android:parentActivityName=".tournaments.tournament.TicketList"/>
+        <activity android:name=".tournaments.tournament.MerchList"
+            android:label="Merchandise"
+            android:parentActivityName=".tournaments.tournament.MainActivity"/>
+        <activity android:name=".tournaments.tournament.MerchList_cardView" />
+
+        <activity android:name=".tournaments.tournament.TicketAdd"
+            android:label="Add Tickets"
+            android:parentActivityName=".tournaments.tournament.TicketList"/>
+        <activity android:name=".tournaments.tournament.TicketEdit"
+            android:label="Edit Tickets Details"
+            android:parentActivityName=".tournaments.tournament.TicketList"/>
+        <activity android:name=".tournaments.tournament.TicketList"
+            android:label="Tickets"
+            android:parentActivityName=".tournaments.tournament.MainActivity"/>
+        <activity android:name=".tournaments.tournament.ticketList_cardView" />
 
     </application>
 

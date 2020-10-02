@@ -265,6 +265,24 @@
 
         </androidx.gridlayout.widget.GridLayout>
 
+        <RelativeLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomBarNav"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:itemBackground="@color/colorPrimaryDark"
+                app:itemIconTint="@color/colorPrimary"
+                app:itemRippleColor="#FFC107"
+                app:layout_behavior=""
+                app:menu="@menu/bottom_user" />
+
+        </RelativeLayout>
+
     </LinearLayout>
 
 </ScrollView>
