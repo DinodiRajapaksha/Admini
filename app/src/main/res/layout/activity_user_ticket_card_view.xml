@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".userTicketCardView">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/Tickets"
+        android:layout_width="209dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="50dp"
+        android:background="#FFFFFF"
+        android:text="TICKETS"
+        android:textAlignment="center"
+        android:textColor="#040404"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="280dp"
+          android:layout_marginTop="15dp"
+          android:src="@drawable/venue_816" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/postblockname1"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/b1block"
+        android:textColor="#040404"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/postblockprice1"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/b1price"
+        android:textColor="#040404"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/postblockname2"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/b2block"
+                android:textColor="#040404"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/postblockprice2"
+                android:layout_width="100dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/b2price"
+                android:textColor="#040404"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/postblockname3"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/b3block"
+                android:textColor="#040404"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/postblockprice3"
+                android:layout_width="100dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/b3price"
+                android:textColor="#040404"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/postblockname4"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/b4block"
+            android:textColor="#040404"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/postblockprice4"
+            android:layout_width="100dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/b4price"
+            android:textColor="#040404"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+</LinearLayout>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/postblockname5"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/b5block"
+            android:textColor="#040404"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/postblockprice5"
+            android:layout_width="100dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/b5price"
+            android:textColor="#040404"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:cardCornerRadius="8dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/block1"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#00040404"
+                        android:backgroundTint="#090808"
+                        android:entries="@array/block_types"
+                        android:gravity="left"
+                        android:outlineProvider="background"
+                        android:overScrollMode="ifContentScrolls"
+                        android:prompt="@string/spinner_stadium_blocks"
+                        android:textColor="#F4FF81"
+                        android:textSize="40sp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                   <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/noOfTickets1"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="@string/block1"
+                        android:inputType="number"
+                        android:textAlignment="center"
+                       app:errorEnabled ="true"/>
+            </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/block2"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#00040404"
+                        android:backgroundTint="#090808"
+                        android:entries="@array/block_types2"
+                        android:gravity="left"
+                        android:outlineProvider="background"
+                        android:overScrollMode="ifContentScrolls"
+                        android:prompt="@string/spinner_stadium_blocks2"
+                        android:textColor="#F4FF81"
+                        android:textSize="30sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/noOfTickets2"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="@string/block1"
+                            android:inputType="number"
+                            android:textAlignment="center"
+                            app:errorEnabled ="true"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/btnbuy1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#D9B011"
+                    android:text="@string/buybtn1"
+                    android:textSize="25dp" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="680dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomBarNav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            app:itemBackground="@color/colorPrimaryDark"
+            app:itemIconTint="@color/colorPrimary"
+            app:itemRippleColor="#FFC107"
+            app:layout_behavior="com.mypackage.BottomNavigationBehavior"
+            app:menu="@menu/bottom_user" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

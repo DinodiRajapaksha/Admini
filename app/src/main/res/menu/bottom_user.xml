@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:id="@+id/ic_shop"
+            android:icon="@drawable/ic_shop"
+            android:title="shop">
+
+        </item>
+        <item
+            android:id="@+id/ic_stadiums"
+            android:icon="@drawable/ic_stadium"
+            android:title="stadiums">
+
+        </item>
+        <item
+            android:id="@+id/ic_home"
+            android:icon="@drawable/ic_ho"
+            android:title="home">
+
+        </item>
+        <item
+            android:id="@+id/ic_teams"
+            android:icon="@drawable/ic_team"
+            android:title="teams">
+
+        </item>
+        <item
+            android:id="@+id/ic_tournaments"
+            android:icon="@drawable/ic_tournament"
+            android:title="tournaments">
+
+        </item>
+</menu>
