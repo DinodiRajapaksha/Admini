@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".userMerchCardView">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/usermerchcard"
+                android:layout_marginLeft="6dp"
+                android:layout_width="380dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="170dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#1048A4"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/itemname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="@string/TSHIRT1"
+                                android:textColor="#E1B404"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:id="@+id/itemprice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="@string/price1"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="17dp"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="@string/qty1"
+                                android:textColor="#070707"
+                                android:textSize="18dp" />
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/merchq1"
+                                    android:layout_width="56dp"
+                                    android:layout_height="47dp"
+                                    android:layout_weight="1"
+                                    android:ems="10"
+                                    android:hint="0"
+                                    android:inputType="number"
+                                    android:textAlignment="center"
+                                    app:errorEnabled="true" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgitem"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="50dp"
+                            android:src="@drawable/englandjerseywebp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnmerchbuy"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#D9B011"
+                    android:text="@string/buybtn1"
+                    android:textSize="25dp" />
+            </LinearLayout>-->
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

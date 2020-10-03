@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserMerchList">
+
+    <TextView
+        android:id="@+id/Tickets"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="50dp"
+        android:background="#FFFFFF"
+        android:text="MERCHANDISE"
+        android:textAlignment="center"
+        android:textColor="#040404"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/usermerchListView"
+        android:layout_width="wrap_content"
+        android:layout_height="487dp"
+        android:layout_above="@+id/Tickets"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="-550dp"
+        android:clickable="true"
+        android:focusable="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="800dp"
+        android:layout_marginBottom="-8dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnmerchbuy"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="0dp"
+            android:background="#D9B011"
+            android:text="@string/buybtn1"
+            android:textSize="25dp" />
+
+        <RelativeLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomBarNav"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                app:itemBackground="@color/colorPrimaryDark"
+                app:itemIconTint="@color/colorPrimary"
+                app:itemRippleColor="#FFC107"
+                app:layout_behavior=""
+                app:menu="@menu/bottom_user" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
