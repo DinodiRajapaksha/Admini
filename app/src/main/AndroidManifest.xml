@@ -134,6 +134,10 @@
         <activity android:name=".tournaments.tournament.NationalTeams" />
         <activity android:name=".tournaments.tournament.UserTeamCategoty" />
         <activity android:name=".tournaments.tournament.SriLankaNatTeamPlayers" />
+        
+         <activity android:name=".tournaments.tournament.UserStadiumDetails" />
+        <activity android:name=".tournaments.tournament.UserStadiumCountry" />
+        <activity android:name=".tournaments.tournament.UserStadium" />
 
 
     </application>
