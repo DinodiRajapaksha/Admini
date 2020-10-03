@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1001457581467",
+    "firebase_url": "https://howzaat-b09f0.firebaseio.com",
+    "project_id": "howzaat-b09f0",
+    "storage_bucket": "howzaat-b09f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001457581467:android:f6aa788dd5d192a069353e",
+        "android_client_info": {
+          "package_name": "app.mad.admini"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001457581467-4bl12c08281p6cu4hq3nd4k8k68mho1p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.mad.admini",
+            "certificate_hash": "51fdcc3a35c07e730af8bc6ea797de26bf2be786"
+          }
+        },
+        {
+          "client_id": "1001457581467-geq91otvtq3r7lah93i5fmtesb9udjbr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvVZ8c6ZpBWI0MLqd9CxVt8BBatrdW9E8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001457581467-geq91otvtq3r7lah93i5fmtesb9udjbr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
