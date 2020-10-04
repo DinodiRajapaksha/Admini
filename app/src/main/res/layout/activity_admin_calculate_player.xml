@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bw"
+    tools:context=".AdminCalculatePlayer">
+
+    <EditText
+        android:id="@+id/etinnings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter no of innings"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/innings"
+        app:layout_constraintStart_toEndOf="@+id/innings"
+        app:layout_constraintStart_toStartOf="@+id/etballs" />
+
+    <EditText
+        android:id="@+id/etruns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:ems="10"
+        android:hint="Enter new runs"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/noOfRuns"
+        app:layout_constraintStart_toStartOf="@+id/etballs"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/noOfRuns"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="152dp"
+        android:text="Runs"
+        android:textColor="#0E0E0E"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/balls"
+        android:layout_width="131dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Balls Faced"
+        android:textColor="#100F0F"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noOfRuns" />
+
+    <EditText
+        android:id="@+id/etballs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="No of balls faced"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etruns" />
+
+    <TextView
+        android:id="@+id/innings"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Innings"
+        android:textColor="#0E0E0E"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balls" />
+
+    <Button
+        android:id="@+id/btncalc"
+        android:layout_width="151dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="#0A43A3"
+        android:text="Calculate"
+        android:textColor="#FFFBFB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etwkts" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="292dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="24dp"
+        android:text="CALCULATOR"
+        android:textAlignment="center"
+        android:textColor="#0B0B0B"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/overs"
+        android:layout_width="80dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:text="Overs"
+        android:textColor="#100F0F"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/innings" />
+
+    <EditText
+        android:id="@+id/etovers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter new overs"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/overs"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        android:src="@drawable/batsman"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="388dp"
+        android:src="@drawable/cricket"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/noOfRunsball"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="68dp"
+        android:text="Runs"
+        android:textColor="#0E0E0E"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/overs" />
+
+    <EditText
+        android:id="@+id/etrunsballs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:hint="Runs against baller"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etovers" />
+
+    <TextView
+        android:id="@+id/noOfballsballer"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Balls"
+        android:textColor="#0E0E0E"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noOfRunsball" />
+
+    <EditText
+        android:id="@+id/etballsball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Number of balls"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etrunsballs" />
+
+    <TextView
+        android:id="@+id/wickets"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Wickets"
+        android:textColor="#0E0E0E"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noOfballsballer" />
+
+    <EditText
+        android:id="@+id/etwkts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Number of wickets"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etballsball" />
+</androidx.constraintlayout.widget.ConstraintLayout>

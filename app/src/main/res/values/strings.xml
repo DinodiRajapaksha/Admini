@@ -1,0 +1,322 @@
+<resources>
+
+
+    <string name="completed">Completed</string>
+    <string name="ongoing">Ongoing</string>
+    <string name="upcoming">Upcoming</string>
+S
+    <string name="app_name">Admini</string>
+    <string name="add_tournament_details">Add Tournament Details</string>
+    <string name="team_02">Team 02</string>
+    <string name="team_04">Team 04</string>
+    <string name="team_07">Team 07</string>
+    <string name="no_of_matches">No of Matches</string>
+    <string name="from">From</string>
+    <string name="team_08">Team 08</string>
+    <string name="date">Date</string>
+    <string name="tournament_name">Tournament Name</string>
+    <string name="to">To</string>
+    <string name="hint">hint</string>
+    <string name="team_06">Team 06</string>
+
+
+    <string name="MsgCountry">Country</string>
+    <string name="MsgSL">Sri Lanka</string>
+    <string name="MsgAUS">Australia</string>
+    <string name="MsgNZ">New Zealand</string>
+    <string name="MsgIN">India</string>
+    <string name="MsgPAK">Pakistan</string>
+    <string name="MsgBNG">Bangladesh</string>
+    <string name="MsgUAE">UAE</string>
+    <string name="MsgSA">South Africa</string>
+    <string name="MsgAddSt">Add/Edit Stadium</string>
+    <string name="MsgEdit">Edit</string>
+    <string name="MsgAdd">Add Stadium</string>
+
+    <string name="MsgAsgiriya">Asgiriya</string>
+    <string name="MsgGalle">Galle</string>
+    <string name="MsgMahinda">Mahinda Rajapaksa</string>
+    <string name="MsgSara">P.Sara Oval</string>
+    <string name="MsgPremadasa">R.Premadasa</string>
+    <string name="MsgPalla">Pallekele </string>
+    <string name="MsgTy">Tyrone Fernando</string>
+    <string name="Msgtitle">Edit Stadium</string>
+    <string name="MsgEd">Edit</string>
+
+    <string name="Title">Add New Stadium</string>
+    <string name="MsgStName">Stadium Name</string>
+    <string name="MsgLoc">Location</string>
+    <string name="Seats">Seating Capacity</string>
+    <string name="noMatches">Number of Matches</string>
+    <string name="size">Size</string>
+    <string name="ImgCo">Image of Country</string>
+    <string name="ImgSt">Image of Stadium</string>
+    <string name="btnAdd">Add</string>
+
+
+    <string name="btnDel">Delete</string>
+    <string name="btnUpd">Update</string>
+    <string name="TitleEdit">Edit Stadium</string>
+
+    <string name="MsgSeat">SEATS</string>
+    <string name="Msgsize">SIZE</string>
+    <string name="MsgMatches">MATCHES</string>
+    <string name="MsgInfo">STADIUM INFO</string>
+    <string name="MsgWC">World Cup Matches</string>
+    <string name="MsgWCValue">3</string>
+    <string name="MsgSeatsValue">35 000</string>
+    <string name="MsgSizeValue">80m(long),75m(wide)</string>
+    <string name="MsgTotMatches">46</string>
+    <string name="MsgTest">Test Matches</string>
+    <string name="MsgTestVal">6</string>
+    <string name="MsgODI">ODI Matches</string>
+    <string name="MsgODIVal">19</string>
+    <string name="MsgT20">T20 Matches</string>
+    <string name="MsgT20Val">18</string>
+    <string name="MsgSt">Pallakella International Cricket Stadium, Pallekela</string>
+    <string name="MsgStMatches">Stadium Matches</string>
+    <string name="MsgTitle">Edit Stadium details</string>
+    <string name="titleStadium">Stadium</string>
+    <string name="AdminStadium">Admin-Stadium</string>
+    <string name="adMatch">Admin-Match</string>
+    <string name="UseStad">User-Stadium</string>
+    <string name="UserMatch">User-Match</string>
+    <string name="msgMa">View Matches in Stadium</string>
+
+    <string name="submit_button">SUBMIT</string>
+    <string name="remove_button">REMOVE</string>
+    <string name="title">Edit Merchandise Details</string>
+    <string name="tourname">Tournament Name</string>
+    <string name="matchid">Match ID</string>
+    <string name="addtitlemerch">Add New Merchandise Item</string>
+    <string name="stadium">Stadium name</string>
+    <string name="titleAddTicket">Add New Tickets</string>
+    <string name="itemname">Item Name</string>
+    <string name="unitprice">Unit Price (LKR)</string>
+    <string name="btnUploadMerch">Upload Photo</string>
+
+
+    <string name="SpinnerBowlerBat">Batting</string>
+    <string name="tabitem1">Tickets</string>
+    <string name="tabitem2">MERCHANDISE</string>
+    <string name="block1">Number of Tickets</string>
+    <string name="buybtn1">BUY</string>
+    <string name="merchtitle">MERCHANDISE</string>
+    <string name="TSHIRT1">T-Shirt</string>
+    <string name="country1">England</string>
+    <string name="qty1">Quantity :</string>
+    <string name="qtyinput1">0</string>
+    <string name="cap1">Cap</string>
+    <string name="price1">LKR2500.00</string>
+    <string name="price2">LKR1500.00</string>
+    <string name="price3">LKR2000.00</string>
+    <string name="price4">LKR1000.00</string>
+    <string name="TickListTourName">IPL 2020</string>
+    <string name="TickListMatchID">m001</string>
+    <string name="TickListBlock">A Upper</string>
+    <string name="TicketListEdit">Edit</string>
+    <string name="TicketListDeletebtn">delete</string>
+    <string name="TicketListTitle">TICKETS</string>
+    <string name="titleEditTicket">Edit Ticket Details</string>
+    <string name="btnUpdateTicket">Update</string>
+    <string name="block">Block Type</string>
+    <string name="qty">Quantity</string>
+    <string name="unitPrice">Unit Price</string>
+    <string name="btnTicketEdit">Update</string>
+    <string name="btnTicketCancel">Cancel</string>
+
+    <string name="merchEdittitle">Edit Merchandise Details</string>
+    <string name="merchtourname">Tournament Name</string>
+    <string name="merchmatchid">Match ID</string>
+    <string name="merchitemname">Item Name</string>
+    <string name="merchItemQty">Quantity</string>
+    <string name="merchUnitPrice">Unit Price</string>
+    <string name="btnUpdateMerch">Update</string>
+    <string name="btncancelMerch">Cancel</string>
+    <string name="nerchAddTitle">"Add New Merchandise "</string>
+    <string name="itemImage">image</string>
+
+    <string name="btnprofileadd">SUBMIT</string>
+    <string name="btnprofileremove">REMOVE</string>
+    <string name="spinner_tournaments">Tests</string>
+    <string-array name="tournament_types">
+        <item>Tests</item>
+        <item>ODIs</item>
+        <item>T20s</item>
+    </string-array>
+    <string name="SpinnerBowlerBat2">Batting</string>
+    <string-array name="Bowler_Bat">
+        <item>Batting</item>
+        <item>Bowling</item>
+    </string-array>
+    <string name="EditProfiletitle">Edit Player Profile</string>
+    <string name="name">Player Name</string>
+    <string name="age">Age</string>
+    <string name="teams">Major Teams</string>
+    <string name="role">Playing Role</string>
+    <string name="match1">Matches</string>
+    <string name="inn1">Innings</string>
+    <string name="notout">Not Out</string>
+    <string name="runs1">Runs</string>
+    <string name="bf">BF</string>
+    <string name="hs">HS</string>
+    <string name="avg1">Average</string>
+    <string name="sr">SR</string>
+    <string name="s50">50s</string>
+    <string name="s100">100s</string>
+    <string name="s4">4s</string>
+    <string name="s6">6s</string>
+    <string name="ct">Ct</string>
+    <string name="st">St</string>
+    <string name="match2">Matches</string>
+    <string name="Inn2">Innings</string>
+    <string name="balls">Balls</string>
+    <string name="runs2">Runs</string>
+    <string name="wkt">Wickets</string>
+    <string name="bbi">BBI</string>
+    <string name="bbm">BBM</string>
+    <string name="avg2">Average</string>
+    <string name="econ">Economy</string>
+    <string name="sr2">SR</string>
+    <string name="w4">4w</string>
+    <string name="w5">5w</string>
+    <string name="w10">10w</string>
+    <string name="addProfileTitle">Add Player Profile Details</string>
+
+    <string name="ongoingmatch">Ongoing</string>
+    <string name="tournamentname">World Cup Super League</string>
+    <string name="score1">378(109.3)</string>
+    <string name="score2">92/4(28</string>
+    <string name="des">AUS trail by 286 runs</string>
+    <string name="des2">SL bowling</string>
+    <string name="des3">AUS batting</string>
+    <string name="favteams">Favourite Teams</string>
+    <string name="spinner_stadium_blocks">A Upper</string>
+    <string-array name="block_types">
+        <item>A Upper</item>
+        <item>B Upper</item>
+        <item>A Lower</item>
+        <item>B Lower</item>
+        <item>Grand Stand</item>
+    </string-array>
+    <string name="spinner_stadium_blocks2">B Upper</string>
+    <string-array name="block_types2">
+        <item>B Upper</item>
+        <item>A Upper</item>
+        <item>A Lower</item>
+        <item>B Lower</item>
+        <item>Grand Stand</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="b2block">B Upper =</string>
+    <string name="b1block">A Upper =</string>
+    <string name="b1price">1500.00</string>
+    <string name="b2price">1500.00</string>
+    <string name="b3block">B Lower =</string>
+    <string name="b3price">1200.00</string>
+    <string name="b4block">A Lower =</string>
+    <string name="b4price">1200.00</string>
+    <string name="b5block">Grand Stand =</string>
+    <string name="b5price">5000.00</string>
+
+    <string name="MsgNatTeams">National Teams</string>
+    <string name="MsgSriLanka">Sri Lanka</string>
+    <string name="MsgAustralia">Australia</string>
+    <string name="MsgNewZealand">New Zealand</string>
+    <string name="MsgIndia">India</string>
+
+    <string name="MsgSriLankanTeam">Sri Lanka National Team</string>
+    <string name="Msgcaptain">Captain :-</string>
+    <string name="Msgdimuth">Dimuth Karunaratne (Batsman)</string>
+    <string name="MsgMalinga">Lasith Malinga (Bowler)</string>
+    <string name="MsgMathews">Anjelo Mathews (All - rounder)</string>
+    <string name="MsgThisara">Thisara Perera (All - rounder)</string>
+    <string name="MsgKusalMendis">Kusal Mendis (Wicket - Keeper)</string>
+    <string name="MsgAvishka">Avishka Fernando (Batsman)</string>
+    <string name="MsgLahiru">Lahiru Thirimanna (Batsman)</string>
+    <string name="MsgSurangaLakmal">Suranga Lakmal (Bowler)</string>
+    <string name="MsgIsuru">Isuru Udana (All-rounder)</string>
+    <string name="MsgDananjaya">Dananjaya De Silva (All - rounder)</string>
+    <string name="MsgJeevan">Jeevan Mendis (All - rounder)</string>
+    <string name="MsgAddNewPlayer">Add New Player</string>
+    <string name="MsgAddNewTeam">Add New Team</string>
+    <string name="MsgTeamName">Team Name :</string>
+    <string name="MsgTeamNameButton">xxxxxxxxxxxxx</string>
+    <string name="MsgCategory">Category  :</string>
+    <string name="MsgCategoryButton">xxxxxxxxxxxxx</string>
+    <string name="MsgNoBatsman">No Of Batsman :</string>
+    <string name="msgNoOfBowlers">No Of Bowlers :</string>
+    <string name="MsgNoAllrouders">No Of All-rounders :</string>
+    <string name="MsgWicketKeepers">No Of Wicket - Keepers :</string>
+    <string name="MsgConfirm1">Confirm</string>
+    <string name="BTEdit1">Edit</string>
+    <string name="BTEdit2">Edit</string>
+    <string name="BTEdit3">Edit</string>
+    <string name="BTEdit4">Edit</string>
+    <string name="MsgConfirm">Confirm</string>
+    <string name="MsgUpdate">Update</string>
+    <string name="MsgDelete">Delete</string>
+    <string name="MsgAddCommentary">Add New Commentary</string>
+    <string name="MsgOver">Over :</string>
+    <string name="Msgover">Value</string>
+    <string name="MsgRuns">No Of Runs/Wicket</string>
+    <string name="MsgRunsBT">Value</string>
+    <string name="MsgComment">Value</string>
+    <string name="MsgComment1">Comment</string>
+    <string name="MsgAddEnd">Add End Over</string>
+    <string name="MsgTotRuns">Total Runs for Over</string>
+    <string name="MsgTotRunsVal">Value</string>
+    <string name="MsgWICKETSvAL">Wickets</string>
+    <string name="MsgBTWickVal">Value</string>
+    <string name="MsgTVcURBatsman">Current Batsman</string>
+    <string name="MsgCurnBTBats">Value</string>
+    <string name="MsgTotRunsNE">Total Runs Needed</string>
+    <string name="MsgTotRunsNEE">Value</string>
+    <string name="MsgBallsRem">Balls Remaining</string>
+    <string name="MsgbtBallsRem">Value</string>
+    <string name="MsgAddCom">Add</string>
+    <string name="BTPedit1">Edit</string>
+    <string name="strUser">User</string>
+    <string name="strAdmin">Admin</string>
+    <string name="MsgICC">ICC</string>
+    <string name="MsgIPL">IPL</string>
+    <string name="MsgNational">National</string>
+    <string name="strNational">National</string>
+    <string name="MsgLoginIn">Sign In</string>
+    <string name="MsgLoginIn1">New user ?</string>
+    <string name="BTLogin2">Create an account</string>
+    <string name="MsgUsername">Username or email</string>
+    <string name="MsgPassword">Password</string>
+    <string name="MsgKeepmesignin">Keep me signed in</string>
+    <string name="Btsignin">Sign In</string>
+    <string name="MsgTVLa">New User?</string>
+    <string name="UNTV">Username or Email</string>
+    <string name="PWTV">Password</string>
+    <string name="PTUN">Username or Email</string>
+    <string name="PWPT">Password</string>
+    <string name="MsgSignup1">Sign Up</string>
+    <string name="MsgSignup3">Already an user?</string>
+    <string name="MsgSignup4">Sign In</string>
+    <string name="MsgBTUN">"Username "</string>
+    <string name="MsgBTPW">Password</string>
+    <string name="MsgRPW">Re enter Password</string>
+    <string name="MsgDOB">Email</string>
+    <string name="MsgBTCountry">Country</string>
+    <string name="MsgSignupLast">Sign In</string>
+    <string name="BTMem">Member?</string>
+    <string name="TVUNS">Username</string>
+    <string name="TVPWS">Password</string>
+    <string name="TVCS">Country</string>
+    <string name="TVPWS2">Re enter Password</string>
+    <string name="TVEmailS3">Email</string>
+    <string name="TVEmailS2" />
+    <string name="TVmail">Email</string>
+    <string name="PTUName">Username</string>
+    <string name="PTEmailA">Email</string>
+    <string name="PTCountryA">Country</string>
+    <string name="PTPasswordA">Password</string>
+    <string name="PTRePasswordA">Re-enter Password</string>
+
+
+</resources>

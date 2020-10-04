@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tournaments.tournament.addUnTLU">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bw"
+        tools:context=".vUnMatch">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="650dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewMU"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:outlineProvider="none"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints">
+
+                    </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="88dp"
+                        android:background="@color/colorPrimary"
+                        android:text="submit"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/te011"
+                        app:layout_constraintVertical_bias="0.627" />
+
+                    <EditText
+                        android:id="@+id/mStadium"
+                        android:layout_width="320dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="344dp"
+                        android:background="#C6D812"
+                        android:outlineAmbientShadowColor="#752C2C"
+                        android:text="Player 8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.466"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/te03TLU"
+                        android:layout_width="320dp"
+
+                        android:layout_height="30dp"
+                        android:layout_marginTop="476dp"
+                        android:background="#C6D812"
+                        android:outlineAmbientShadowColor="#752C2C"
+                        android:text="Player 11"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.466"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/te04TLU"
+                        android:layout_width="320dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="432dp"
+                        android:background="#C6D812"
+                        android:outlineAmbientShadowColor="#752C2C"
+                        android:text="Player 10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.466"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/mTeam1"
+                        android:layout_width="320dp"
+
+                        android:layout_height="30dp"
+                        android:layout_marginTop="300dp"
+                        android:background="#C6D812"
+                        android:outlineAmbientShadowColor="#752C2C"
+                        android:text="Player 7"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.466"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/te09TLU"
+                        android:layout_width="320dp"
+
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="136dp"
+                        android:background="#C6D812"
+                        android:outlineAmbientShadowColor="#752C2C"
+                        android:text="Player 3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/te06TLU"
+                        android:layout_width="320dp"
+
+                        android:layout_height="30dp"
+                        android:layout_marginTop="220dp"
+                        android:background="#C6D812"
+                        android:outlineAmbientShadowColor="#752C2C"
+                        android:text="Player 5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.533"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/cardViewMU" />
+
+                    <EditText
+                        android:id="@+id/te07TLU"
+                        android:layout_width="320dp"
+
+                        android:layout_height="30dp"
+                        android:layout_marginTop="180dp"
+                        android:background="#CDDC39"
+                        android:outlineAmbientShadowColor="#752C2C"
+                        android:text="Player 4"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.533"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/cardViewMU"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/te08TLU"
+                        android:layout_width="320dp"
+
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="96dp"
+                        android:background="#CDDC39"
+                        android:outlineAmbientShadowColor="#752C2C"
+                        android:text="Player 2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/cardViewMU"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/te10TLU"
+                        android:layout_width="320dp"
+
+                        android:layout_height="30dp"
+                        android:layout_marginTop="260dp"
+                        android:background="#C6D812"
+                        android:outlineAmbientShadowColor="#752C2C"
+                        android:text="Player 6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/mType"
+                        android:text="Player 1"
+
+                        android:layout_width="320dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="56dp"
+                        android:background="#C6D812"
+                        android:outlineAmbientShadowColor="#752C2C"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/cardViewMU" />
+
+                    <EditText
+                        android:id="@+id/te11TLU"
+                        android:layout_width="320dp"
+
+                        android:layout_height="30dp"
+                        android:layout_marginTop="388dp"
+                        android:background="#C6D812"
+                        android:outlineAmbientShadowColor="#752C2C"
+                        android:text="Player 9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.466"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/cardViewMU"
+                        tools:ignore="MissingConstraints" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
