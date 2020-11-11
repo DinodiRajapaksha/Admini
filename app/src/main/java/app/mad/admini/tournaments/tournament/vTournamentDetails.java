@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -46,15 +47,12 @@ public class vTournamentDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_v_tournament_details);
 
-        //dbh = new databaseHelper(getApplicationContext());
-
-
         txteditNamevt   = findViewById(R.id.teditNamevt);
         txteditTouvt    = findViewById(R.id.teditTouvt);
         txteditCountryvt= findViewById(R.id.teditCountryvt);
         txteditNumvt    = findViewById(R.id.teditNumvt);
-        tdisplayDatevt  = findViewById(R.id.datetovtvt);
-        tdisplayDatexvt = findViewById(R.id.datefromvtvt);
+        tdisplayDatevt  = findViewById(R.id.datefromvtvt);
+        tdisplayDatexvt = findViewById(R.id.datetovtvt);
         teamOne       = (CheckBox)findViewById(R.id.teamOne);
         teamTwo       = (CheckBox)findViewById(R.id.teamTwo);
         teamThree     = (CheckBox)findViewById(R.id.teamThree);
@@ -66,68 +64,70 @@ public class vTournamentDetails extends AppCompatActivity {
 
         btnTEditV    = findViewById(R.id.btnTEditV);
 
+        final Tournament tournament;
 
+        tournament = new Tournament(
+                tid,
+                txteditNamevt.getText().toString(),
+                txteditCountryvt.getText().toString(),
+                tdisplayDatevt.getText().toString(),
+                tdisplayDatexvt.getText().toString(),
+                txteditNumvt.getText().toString(),
+                txteditTouvt.getText().toString(),
+                teamOneI, teamTwoI,teamThreeI, teamFourI,
+                teamFiveI, teamSixI, teamSevenI, teamEightI);
+
+
+
+        while(teamOne.isChecked()){
+            teamOneB = true;
+            teamOneI = (teamOneB) ? 1 : 0;
+            tournament.setTeamOne(teamOneI);
+            break;
+        }
+        while(teamTwo.isChecked()){
+            teamTwoB = true;
+            teamTwoI = (teamTwoB) ? 1 : 0;
+            tournament.setTeamTwo(teamTwoI);
+            break;
+        }
+        while(teamThree.isChecked()){
+            teamThreeB = true;
+            teamThreeI = (teamThreeB) ? 1 : 0;
+            break;
+        }
+        while(teamFour.isChecked()){
+            teamFourB = true;
+            teamFourI = (teamFourB) ? 1 : 0;
+            break;
+        }
+        while(teamFive.isChecked()){
+            teamFiveB= true;
+            teamOneI = (teamOneB) ? 1 : 0;
+            break;
+        }
+        while(teamSix.isChecked()){
+            teamSixB= true;
+            teamSixI = (teamSixB) ? 1 : 0;
+            break;
+        }
+        while(teamSeven.isChecked()){
+            teamSevenB= true;
+            teamSevenI = (teamSevenB) ? 1 : 0;
+            break;
+        }
+        while(teamEight.isChecked()){
+            teamEightB= true;
+            teamEightI = (teamEightB) ? 1 : 0;
+            break;
+        }
 
         btnTEditV.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View viewx) {
                 databaseHelper dbh = new databaseHelper(vTournamentDetails.this);
-                Tournament tournament;
 
-                tournament = new Tournament(
-                        tid,
-                        txteditNumvt.getText().toString(),
-                        txteditNamevt.getText().toString(),
-                        txteditCountryvt.getText().toString(),
-                        txteditTouvt.getText().toString(),
-                        tdisplayDatevt.getText().toString(),
-                        tdisplayDatexvt.getText().toString(),
-                        teamOneI, teamTwoI,teamThreeI, teamFourI,
-                        teamFiveI, teamSixI, teamSevenI, teamEightI);
-
-                while(teamOne.isChecked()){
-                    teamOneB = true;
-                    teamOneI = (teamOneB) ? 1 : 0;
-                    tournament.setTeamOne(teamOneI);
-                    break;
-                }
-                while(teamTwo.isChecked()){
-                    teamTwoB = true;
-                    teamTwoI = (teamTwoB) ? 1 : 0;
-                    tournament.setTeamTwo(teamTwoI);
-                    break;
-                }
-                while(teamThree.isChecked()){
-                    teamThreeB = true;
-                    teamThreeI = (teamThreeB) ? 1 : 0;
-                    break;
-                }
-                while(teamFour.isChecked()){
-                    teamFourB = true;
-                    teamFourI = (teamFourB) ? 1 : 0;
-                    break;
-                }
-                while(teamFive.isChecked()){
-                    teamFiveB= true;
-                    teamOneI = (teamOneB) ? 1 : 0;
-                    break;
-                }
-                while(teamSix.isChecked()){
-                    teamSixB= true;
-                    teamSixI = (teamSixB) ? 1 : 0;
-                    break;
-                }
-                while(teamSeven.isChecked()){
-                    teamSevenB= true;
-                    teamSevenI = (teamSevenB) ? 1 : 0;
-                    break;
-                }
-                while(teamEight.isChecked()){
-                    teamEightB= true;
-                    teamEightI = (teamEightB) ? 1 : 0;
-                    break;
-                }
 
                 dbh.updateTous(tournament);
 
@@ -137,34 +137,7 @@ public class vTournamentDetails extends AppCompatActivity {
             }
         });
 
-        tdisplayDatexvt.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View view){
-                Calendar cal = Calendar.getInstance();
-                int yearx  = cal.get(Calendar.YEAR);
-                int monthx = cal.get(Calendar.MONTH);
-                int dayx   = cal.get(Calendar.DAY_OF_MONTH);
 
-                DatePickerDialog dialogx = new DatePickerDialog(
-                        vTournamentDetails.this,
-                        android.R.style.Theme_DeviceDefault_Dialog_MinWidth,
-                        tdateSetListenerxvt,
-                        yearx,monthx,dayx);
-                dialogx.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialogx.show();
-            }
-        });
-
-        tdateSetListenerxvt = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker datePicker, int yearx, int monthx, int dayx) {
-                monthx = monthx+1;
-
-                String datex = monthx + "/" + dayx +"/" + yearx;
-                tdisplayDatexvt.setText(datex);
-            }
-        };
 
 
         tdisplayDatevt.setOnClickListener(new View.OnClickListener()
@@ -196,6 +169,34 @@ public class vTournamentDetails extends AppCompatActivity {
             }
         };
 
+        tdisplayDatexvt.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view){
+                Calendar cal = Calendar.getInstance();
+                int yearx  = cal.get(Calendar.YEAR);
+                int monthx = cal.get(Calendar.MONTH);
+                int dayx   = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialogx = new DatePickerDialog(
+                        vTournamentDetails.this,
+                        android.R.style.Theme_DeviceDefault_Dialog_MinWidth,
+                        tdateSetListenerxvt,
+                        yearx,monthx,dayx);
+                dialogx.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialogx.show();
+            }
+        });
+
+        tdateSetListenerxvt = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int yearx, int monthx, int dayx) {
+                monthx = monthx+1;
+
+                String datex = monthx + "/" + dayx +"/" + yearx;
+                tdisplayDatexvt.setText(datex);
+            }
+        };
         getsetIntentData();
 
         ActionBar ab = getSupportActionBar();
@@ -273,8 +274,6 @@ public class vTournamentDetails extends AppCompatActivity {
             while(teamEightI==1){
                 teamEight.setChecked(true);
                 break;}
-
-
 
         }else{
             Toast.makeText(this, "UH?", Toast.LENGTH_SHORT).show();

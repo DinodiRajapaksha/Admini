@@ -1,8 +1,10 @@
 package app.mad.admini.tournaments.tournament.models;
 
+import static app.mad.admini.tournaments.tournament.models.Tournament.getTid;
+
 public class Matches {
 
-    private String mid;
+    private Integer mid;
     private String matchType;
     private String matchdate;
     private String stadium;
@@ -10,7 +12,8 @@ public class Matches {
     private String team02;
     private String status;
 
-    public Matches(String mid, String matchType, String matchdate, String stadium, String team01, String team02, String status) {
+    public Matches(String tid, Integer mid, String matchType, String matchdate, String stadium, String team01, String team02, String status) {
+        getTid();
         this.mid = mid;
         this.matchType = matchType;
         this.matchdate = matchdate;
@@ -19,12 +22,13 @@ public class Matches {
         this.team02 = team02;
         this.status = status;
     }
+    public Matches(){}
 
-    public String getMid() {
+    public Integer getMid() {
         return mid;
     }
 
-    public void setMid(String mid) {
+    public void setMid(Integer mid) {
         this.mid = mid;
     }
 

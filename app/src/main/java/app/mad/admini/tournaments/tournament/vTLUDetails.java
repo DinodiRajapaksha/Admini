@@ -26,18 +26,22 @@ public class vTLUDetails extends AppCompatActivity {
         setContentView(R.layout.activity_v_tlu_details);
 
 
-        TeamLineUp.co=counterI;
+
+        listTeam = (ListView)findViewById(R.id.listTeamv);
+        ArrayList<String > arrayListv = new ArrayList<>();
+
+
+        //TeamLineUp.co=counterI;
 
         Log.d("coco2", "teams"+counterI);
 
 
+        for(int x=1; x<=2; x++){
 
-        listTeam = (ListView)findViewById(R.id.listTeamv);
-        ArrayList<String > arrayListv = new ArrayList<>();
-        for(int x=1; x<=counterI; x++){
-
-            arrayListv.add("      Team "+x+" of "+counterI);
+            arrayListv.add("      Team "+x+" of "+2);
         }
+
+
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,arrayListv);
         listTeam.setAdapter(arrayAdapter);
 
@@ -81,17 +85,6 @@ public class vTLUDetails extends AppCompatActivity {
 
                 startActivity(intent);
 
-                Log.d("tidxo", "tid" + tid);
-                Log.d("numxo", "num" + num);
-                Log.d("touNamexo", "touName" + touName);
-                Log.d("touTypexo", "touType" + touType);
-                Log.d("touCountryxo", "touCountry" + touCountry);
-                Log.d("fromDatexo", "fromDate" + fromDate);
-                Log.d("toDatexo", "toDate" + toDate);
-
-                intent.putExtra("num", String.valueOf(num));
-                Log.d("blehxx", "too" + num);
-                startActivity(intent);
             }
         });
     }

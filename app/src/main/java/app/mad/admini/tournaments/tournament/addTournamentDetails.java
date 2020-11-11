@@ -37,14 +37,10 @@ public class addTournamentDetails extends AppCompatActivity implements AdapterVi
     CheckBox teamOne, teamTwo, teamThree, teamFour, teamFive, teamSix, teamSeven, teamEight;
     Boolean teamOneB, teamTwoB, teamThreeB, teamFourB, teamFiveB, teamSixB, teamSevenB, teamEightB;
     Integer teamOneI, teamTwoI, teamThreeI, teamFourI, teamFiveI, teamSixI, teamSevenI, teamEightI;
-    public String matchID;
 
-    int teamArray[];
     int counter=0;
 
     String touType,tid;
-
-    databaseHelper dbh;
 
 
 
@@ -82,6 +78,7 @@ public class addTournamentDetails extends AppCompatActivity implements AdapterVi
             public void onClick(View viewx) {
                 databaseHelper dbh = new databaseHelper(addTournamentDetails.this);
                 Tournament tournament;
+
                 while(teamOne.isChecked()){
                     teamOneB = true;
                     teamOneI = (teamOneB) ? 1 : 0;
@@ -133,7 +130,7 @@ public class addTournamentDetails extends AppCompatActivity implements AdapterVi
 
                 TeamLineUp.co = counter;
 
-                Log.d("count", String.valueOf(counter));
+                Log.d("addTournamentDetailscounter", String.valueOf(counter));
 
                 tournament = new Tournament(
                         tid,
@@ -148,18 +145,17 @@ public class addTournamentDetails extends AppCompatActivity implements AdapterVi
 
                 String num = txteditNum.getText().toString();
 
-                Log.d("teamsss", String.valueOf(teamOneI));
-                Log.d("teamsss", String.valueOf(teamOneB));
+                Log.d("addTournamentDetailsTeam", String.valueOf(teamOneI));
+                Log.d("addTournamentDetailsTeam", String.valueOf(teamOneB));
 
-                matchID = txteditName.getText().toString()+tdisplayDate.getText().toString();
-                Log.d("matchID", matchID);
                 dbh.addTou(tournament);
+                tid = dbh.getTid();
+                tournament.setTid(tid);
 
                 Intent intent = new Intent(addTournamentDetails.this, viewForTwo.class);
                 intent.putExtra("num", num);
-                intent.putExtra("matchID", matchID);
+                intent.putExtra("tid", tid);
                 intent.putExtra("counter", String.valueOf(counter));
-                Log.d("tid12345", String.valueOf(tid));
                 startActivity(intent);
 
             }

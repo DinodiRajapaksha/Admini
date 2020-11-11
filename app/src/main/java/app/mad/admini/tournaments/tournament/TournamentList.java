@@ -104,8 +104,7 @@ public class TournamentList extends AppCompatActivity {
                 teamEight.add(c.getInt(14));
             }
         }
-        Log.d("dino1", ""+teamOne);
-
-
+        Log.d("TournamentListdino1", ""+teamOne);
+        Log.d("TournamentListdino1TID", ""+tid);
     }
 }

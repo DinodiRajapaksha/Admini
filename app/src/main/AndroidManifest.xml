@@ -14,7 +14,9 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".tournaments.tournament.one"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,19 +39,23 @@
         <activity
             android:name=".tournaments.tournament.addTournamentDetails"
             android:label="Add Tournament"
+            android:launchMode="singleTop"
             android:parentActivityName=".tournaments.tournament.TournamentList" />
         <activity
             android:name=".tournaments.tournament.viewForTwo"
             android:label="Add Details"
+            android:launchMode="singleTop"
             android:parentActivityName=".tournaments.tournament.addTournamentDetails" />
 
         <activity
             android:name=".tournaments.tournament.aMatchDetails"
             android:label="Match Details"
+            android:launchMode="singleTop"
             android:parentActivityName=".tournaments.tournament.viewForTwo" />
         <activity
             android:name=".tournaments.tournament.aTLUDetails"
             android:label="Team Line-Up Details"
+            android:launchMode="singleTop"
             android:parentActivityName=".tournaments.tournament.viewForTwo" />
 
         <activity
@@ -64,6 +70,7 @@
         <activity
             android:name=".tournaments.tournament.viewTournament"
             android:label="View Details"
+            android:launchMode="singleTop"
             android:parentActivityName=".tournaments.tournament.TournamentList" />
 
         <activity
@@ -73,10 +80,12 @@
         <activity
             android:name=".tournaments.tournament.vMatchDetails"
             android:label="Match Details"
+            android:launchMode="singleTop"
             android:parentActivityName=".tournaments.tournament.viewTournament" />
         <activity
             android:name=".tournaments.tournament.vTLUDetails"
             android:label="Team Line-Up"
+            android:launchMode="singleTop"
             android:parentActivityName=".tournaments.tournament.viewTournament" />
 
         <activity android:name=".tournaments.tournament.vUnTLU"
@@ -133,7 +142,8 @@
             android:parentActivityName=".tournaments.tournament.MainActivity" />
         <activity android:name=".tournaments.tournament.ticketList_cardView" />
         <activity android:name=".tournaments.tournament.UserHome"
-            android:theme="@style/AppThemeU" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            />
         <activity
             android:name=".tournaments.tournament.UserMerchList"
             android:label="Merchandise"

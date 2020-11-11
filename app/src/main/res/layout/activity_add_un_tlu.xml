@@ -45,7 +45,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <Button
-                        android:id="@+id/button2"
+                        android:id="@+id/btn_tsub"
                         android:layout_width="wrap_content"
                         android:layout_height="35dp"
                         android:layout_marginBottom="88dp"
@@ -58,7 +58,7 @@
                         app:layout_constraintVertical_bias="0.627" />
 
                     <EditText
-                        android:id="@+id/mStadium"
+                        android:id="@+id/aTLU8"
                         android:layout_width="320dp"
                         android:layout_height="30dp"
                         android:layout_marginTop="344dp"
@@ -71,7 +71,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <EditText
-                        android:id="@+id/te03TLU"
+                        android:id="@+id/aTLU11"
                         android:layout_width="320dp"
 
                         android:layout_height="30dp"
@@ -85,7 +85,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <EditText
-                        android:id="@+id/te04TLU"
+                        android:id="@+id/aTLU10"
                         android:layout_width="320dp"
                         android:layout_height="30dp"
                         android:layout_marginTop="432dp"
@@ -98,7 +98,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <EditText
-                        android:id="@+id/mTeam1"
+                        android:id="@+id/aTLU7"
                         android:layout_width="320dp"
 
                         android:layout_height="30dp"
@@ -112,7 +112,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <EditText
-                        android:id="@+id/te09TLU"
+                        android:id="@+id/aTLU3"
                         android:layout_width="320dp"
 
                         android:layout_height="30dp"
@@ -126,7 +126,7 @@
                         tools:ignore="MissingConstraints" />
 
                     <EditText
-                        android:id="@+id/te06TLU"
+                        android:id="@+id/aTLU5"
                         android:layout_width="320dp"
 
                         android:layout_height="30dp"
@@ -140,7 +140,7 @@
                         app:layout_constraintTop_toTopOf="@+id/cardViewMU" />
 
                     <EditText
-                        android:id="@+id/te07TLU"
+                        android:id="@+id/aTLU4"
                         android:layout_width="320dp"
 
                         android:layout_height="30dp"
@@ -155,7 +155,7 @@
                         tools:ignore="MissingConstraints" />
 
                     <EditText
-                        android:id="@+id/te08TLU"
+                        android:id="@+id/aTLU2"
                         android:layout_width="320dp"
 
                         android:layout_height="30dp"
@@ -169,7 +169,7 @@
                         tools:ignore="MissingConstraints" />
 
                     <EditText
-                        android:id="@+id/te10TLU"
+                        android:id="@+id/aTLU6"
                         android:layout_width="320dp"
 
                         android:layout_height="30dp"
@@ -183,20 +183,20 @@
                         tools:ignore="MissingConstraints" />
 
                     <EditText
-                        android:id="@+id/mType"
-                        android:text="Player 1"
-
+                        android:id="@+id/aTLU1"
                         android:layout_width="320dp"
+
                         android:layout_height="30dp"
                         android:layout_marginStart="16dp"
                         android:layout_marginTop="56dp"
                         android:background="#C6D812"
                         android:outlineAmbientShadowColor="#752C2C"
+                        android:text="Player 1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="@+id/cardViewMU" />
 
                     <EditText
-                        android:id="@+id/te11TLU"
+                        android:id="@+id/aTLU9"
                         android:layout_width="320dp"
 
                         android:layout_height="30dp"

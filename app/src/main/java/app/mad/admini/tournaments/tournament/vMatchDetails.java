@@ -13,91 +13,85 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 import app.mad.admini.R;
+import app.mad.admini.tournaments.tournament.helper.databaseHelper;
 
 import static java.lang.Integer.parseInt;
 
 public class vMatchDetails extends AppCompatActivity {
 
     ListView listMatch;
-    Integer match_numb;
-    String num;
-    Integer meow;
+    String num, data;
+    Integer meow, x, meowO;
+    databaseHelper dbh;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_v_match_details);
 
-        num = getIntent().getStringExtra("num");
-        meow = parseInt(num);
-
-        Log.d("blehxoxo", "too" + meow);
-
-
-
-
         listMatch = (ListView) findViewById(R.id.listMatch);
         ArrayList<String> arrayList = new ArrayList<>();
-        for (int x = 1; x <= meow; x++) {
 
-            arrayList.add("      Match " + x + " of " + meow);
+        meowO = 2;
+        for (x = 1; x <= meowO; x++) {
+            num = getIntent().getStringExtra("num");
+
+            arrayList.add("      Match " + x );
+            try {
+                meow = parseInt(num);
+            }catch(NumberFormatException ex){
+
+            }
+            if(meowO==2){
+                meowO=meow;
+            }
+
         }
+
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, arrayList);
         listMatch.setAdapter(arrayAdapter);
 
         listMatch.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Intent intent = new Intent(vMatchDetails.this, vUnMatch.class);
+
+                num = getIntent().getStringExtra("num");
 
 
                 String tid = getIntent().getStringExtra("tid");
-                String num = getIntent().getStringExtra("num");
-                String touName = getIntent().getStringExtra("touName");
-                String touType = getIntent().getStringExtra("touType");
-                String touCountry = getIntent().getStringExtra("touCountry");
-                String fromDate = getIntent().getStringExtra("fromDate");
-                String toDate = getIntent().getStringExtra("toDate");
-                Integer teamOne = getIntent().getIntExtra("teamOne", 0);
-                Integer teamTwo = getIntent().getIntExtra("teamTwo", 0);
-                Integer teamThree = getIntent().getIntExtra("teamThree", 0);
-                Integer teamFour = getIntent().getIntExtra("teamFour", 0);
-                Integer teamFive = getIntent().getIntExtra("teamFive", 0);
-                Integer teamSix = getIntent().getIntExtra("teamSix", 0);
-                Integer teamSeven = getIntent().getIntExtra("teamSeven", 0);
-                Integer teamEight = getIntent().getIntExtra("teamEight", 0);
-                Log.d("dino", "" + teamOne);
+
+                if(position == 0){
+                    intent.putExtra("numpass", String.valueOf(1));
+                }else if(position == 1){
+                    intent.putExtra("numpass", String.valueOf(2));
+                }else if(position == 2){
+                    intent.putExtra("numpass", String.valueOf(3));
+                }else if(position == 3){
+                    intent.putExtra("numpass", String.valueOf(4));
+                }else if(position == 4){
+                    intent.putExtra("numpass", String.valueOf(5));
+                }else if(position == 5){
+                    intent.putExtra("numpass", String.valueOf(6));
+                }else if(position == 6){
+                    intent.putExtra("numpass", String.valueOf(7));
+                }else if(position == 7){
+                    intent.putExtra("numpass", String.valueOf(8));
+                }
+
 
                 intent.putExtra("tid", tid);
-                intent.putExtra("num", String.valueOf(num));
-                intent.putExtra("touName", String.valueOf(touName));
-                intent.putExtra("touType", String.valueOf(touType));
-                intent.putExtra("touCountry", String.valueOf(touCountry));
-                intent.putExtra("fromDate", String.valueOf(fromDate));
-                intent.putExtra("toDate", String.valueOf(toDate));
-                intent.putExtra("teamOne", (teamOne));
-                intent.putExtra("teamTwo", (teamTwo));
-                intent.putExtra("teamThree", (teamThree));
-                intent.putExtra("teamFour", (teamFour));
-                intent.putExtra("teamFive", (teamFive));
-                intent.putExtra("teamSix", (teamSix));
-                intent.putExtra("teamSeven", (teamSeven));
-                intent.putExtra("teamEight", (teamEight));
-
                 startActivity(intent);
 
-                Log.d("tidxo", "tid" + tid);
-                Log.d("numxo", "num" + num);
-                Log.d("touNamexo", "touName" + touName);
-                Log.d("touTypexo", "touType" + touType);
-                Log.d("touCountryxo", "touCountry" + touCountry);
-                Log.d("fromDatexo", "fromDate" + fromDate);
-                Log.d("toDatexo", "toDate" + toDate);
-
-                intent.putExtra("num", String.valueOf(num));
-                Log.d("blehxx", "too" + num);
-                startActivity(intent);
             }
         });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

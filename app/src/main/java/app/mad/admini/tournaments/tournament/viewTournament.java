@@ -19,6 +19,7 @@ import app.mad.admini.tournaments.tournament.helper.databaseHelper;
 
 public class viewTournament extends AppCompatActivity {
 
+
     CardView cardView3for1;
     CardView cardView3for2;
     CardView cardView3for3;
@@ -41,6 +42,7 @@ public class viewTournament extends AppCompatActivity {
             public void onClick(View view) {
                 String tid = getIntent().getStringExtra("tid");
                 String touName =getIntent().getStringExtra("touName");
+                String num =getIntent().getStringExtra("num");
                 String touType =getIntent().getStringExtra("touType");
                 String touCountry =getIntent().getStringExtra("touCountry");
                 String fromDate =getIntent().getStringExtra("fromDate");
@@ -237,5 +239,6 @@ public class viewTournament extends AppCompatActivity {
         });
         builder.create().show();
     }
+
 
 }

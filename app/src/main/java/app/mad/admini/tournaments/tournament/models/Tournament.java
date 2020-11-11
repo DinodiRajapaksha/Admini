@@ -38,7 +38,7 @@ public class Tournament {
         this.teamEight = teamEight;
     }
 
-
+    public Tournament() {}
     public Integer getTeamOne() {
         return teamOne;
     }
@@ -109,11 +109,6 @@ public class Tournament {
     public void setTouType(String touType) {
         this.touType = touType;
     }
-
-    public Tournament(String touType) {
-        this.touType = touType;
-    }
-
 
     public String getFromDate() {
         return fromDate;

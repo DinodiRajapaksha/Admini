@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,20 +68,9 @@ public class uitouRecyclerAdapter extends RecyclerView.Adapter<uitouRecyclerAdap
         holder.txtUTouName.setText(String.valueOf(touName.get(position)));
         holder.txtUTouCountry.setText(String.valueOf(touCountry.get(position)));
         holder.txtUDate.setText(String.valueOf((concat(fromDate, toDate)).get(position)));
-        holder.user_mat_row.setAnimation(AnimationUtils.loadAnimation(context, R.anim.fade_transition_animation));
+        holder.user_tou_row.setAnimation(AnimationUtils.loadAnimation(context, R.anim.fade_transition_animation));
 
-        holder.user_mat_row.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, matchUI.class); intent.putExtra("tid", String.valueOf(tid.get(position)));
 
-                intent.putExtra("touName", String.valueOf(touName.get(position)));
-                intent.putExtra("touCountry", String.valueOf(touCountry.get(position)));
-                intent.putExtra("fromDate", String.valueOf(fromDate.get(position)));
-                intent.putExtra("toDate", String.valueOf(toDate.get(position)));
-                activity.startActivity(intent);
-            }
-        });
     }
 
             @Override

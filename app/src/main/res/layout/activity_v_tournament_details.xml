@@ -5,7 +5,7 @@
     android:id="@+id/vtouDetails"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".tournaments.tournament.adm.vTournamentDetails">
+    tools:context=".tournaments.tournament.vTournamentDetails">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -116,8 +116,7 @@
                     android:layout_marginTop="375dp"
                     android:background="#A4FFFFFF"
                     android:ems="2"
-                    android:hint="Tournament Type"
-                    android:inputType="number" />
+                    android:hint="Tournament Type" />
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="350dp"
